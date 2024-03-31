@@ -1,0 +1,1 @@
+# # Binarysearch searches through sorted array, it cuts the array in half every time it doesnot find the element and hence it is called Binary search
