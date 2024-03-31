@@ -1,3 +1,4 @@
+# Linear search traverse through each elements
 nums = [ 2, 4, 7, 2, 7, 9, 5]
 def linearSearch(nums, target):
     for num in nums:
