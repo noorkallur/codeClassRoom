@@ -52,7 +52,7 @@ def searchRange(nums, target):
 # print(searchRange([8,8,8,8,8,8], 8))#0,5
 # print(searchRange([8,8,8,8,8,9], 8))#0,4
 # print(searchRange([8,8,8,8,8,9], 9))#5,5
-# print(searchRange([8,8,8,8,8,9], 10))#5,5
+# print(searchRange([8,8,8,8,8,9], 10))#-1, -1
 # print(searchRange([], 0))#-1 ,-1
 
 ## better code from dev
@@ -83,5 +83,5 @@ print(searchRange([5,7,7,8,8,10], 8)) #3, 4
 print(searchRange([8,8,8,8,8,8], 8))#0,5
 print(searchRange([8,8,8,8,8,9], 8))#0,4
 print(searchRange([8,8,8,8,8,9], 9))#5,5
-print(searchRange([8,8,8,8,8,9], 10))#5,5
+print(searchRange([8,8,8,8,8,9], 10))#-1 , -1
 print(searchRange([], 0))#-1 ,-1
