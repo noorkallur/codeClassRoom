@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
 def floorOfTargetInArray(nums, target):
     s = 0 
     e = len(nums) -1

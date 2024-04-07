@@ -12,20 +12,16 @@ def binarySearchIndexBased(array, target, indxStart, indxEnd):
     return -1
 # suppose array is infinite, hence not using len()
 def inifinteArraySearch(array, target):
+    """Assuming the array is infinite, divide the search ranges starting from 1 and double it till we find the target in range
+    """
     s = 0
-    e = s + 1
-    try:
-        while 1:
-            if array[e] < target:
-                s = e
-                e = e * 2
-            else:
-                return binarySearchIndexBased(array, target, s, e)
-    except IndexError:
-        f"size of array{s*2 - 1} target {target} not found"
-        return -1
-    
-    
+    e = 1
+    while 1:
+        if array[e] < target:
+            s = e + 1 # new start = prevend + 1
+            e = e * 2 # new end = prevend*2
+        else:
+            return binarySearchIndexBased(array, target, s, e)
 array = []
 for i in range(0, 1000):
     array.append((i + 1)*10)    
