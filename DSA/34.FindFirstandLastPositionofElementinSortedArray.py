@@ -76,7 +76,8 @@ def binarySearchTwoWay(nums, target, searchLeft=False): # same solution but opti
 def searchRange(nums, target):
     ans = [-1, -1]
     ans[0] = binarySearchTwoWay(nums, target, True) 
-    ans[1] = binarySearchTwoWay(nums, target)
+    if ans[0]!= -1:
+        ans[1] = binarySearchTwoWay(nums, target)
     return ans
 
 print(searchRange([5,7,7,8,8,10], 8)) #3, 4
