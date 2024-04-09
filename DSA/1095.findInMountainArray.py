@@ -1,7 +1,7 @@
 # # https://leetcode.com/problems/find-in-mountain-array/description/
 def mountainIndexOfArray(nums):
     s = 0
-    e = len(nums)
+    e = len(nums) - 1
     while s < e:
         mid = (s + e)//2
         if nums[mid] > nums[mid+1]:
