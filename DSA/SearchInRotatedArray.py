@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+# https://youtu.be/W9QJ8HaRvJQ?t=10120&si=9s4X981GW_5nXNMw
 def findPivot(arr):
     """_summary_
     Return pivot if present or else returns the end of the array i.e greatest value
