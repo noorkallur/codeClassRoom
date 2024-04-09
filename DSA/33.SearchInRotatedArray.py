@@ -2,7 +2,7 @@
 # https://youtu.be/W9QJ8HaRvJQ?t=10120&si=9s4X981GW_5nXNMw
 def findPivot(arr):
     """_summary_
-    Return pivot if present or else returns the end of the array i.e greatest value
+    Return pivot if present or else return the end of the array i.e greatest value
     technically returns the greatest value in a rotated array
     """
     s = 0
