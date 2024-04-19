@@ -38,11 +38,13 @@ def SearchInRotatedArrayBS(arr, target):
         ans = binsearchIndexBase(arr, target, pivotIndex + 1, len(arr) - 1)
     return ans
     
-print(SearchInRotatedArrayBS([10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8], 6)) #9
-print(SearchInRotatedArrayBS([1, 2, 3, 4, 5, 6, 7, 8], 3)) #2
-print(SearchInRotatedArrayBS([1, 2], 2))#1
-print(SearchInRotatedArrayBS([2, 1], 2))#0
-print(SearchInRotatedArrayBS([2, 1], 1))#1
+# print(SearchInRotatedArrayBS([10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8], 6)) #9
+# print(SearchInRotatedArrayBS([1, 2, 3, 4, 5, 6, 7, 8], 3)) #2
+# print(SearchInRotatedArrayBS([1, 2], 2))#1
+# print(SearchInRotatedArrayBS([2, 1], 2))#0
+# print(SearchInRotatedArrayBS([2, 1], 1))#1
+
+print(findPivot([2,9,2,2,2]))
 
 
 

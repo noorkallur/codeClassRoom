@@ -25,6 +25,7 @@
 
 class Student:
     
+    noOfStudents = 1200
     def __init__(self, colName) :
        self._colName = colName
        
@@ -36,3 +37,4 @@ s1 = Student("REVA")
 print(s1._colName)
 s2 = s1.changeCollege("NEU")
 print(s2._colName)
+print(s2.noOfStudents)

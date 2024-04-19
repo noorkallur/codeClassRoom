@@ -10,10 +10,10 @@ class Vector:
         self.y = y
     
     def __add__(self, other):
-        return Vector(self.x+other.x, self.y+other.y)
+        return Vector(self.x + other.x, self.y + other.y)
     
     def __sub__(self, other):
-        return Vector(self.x-other.x, self.y-other.y)
+        return Vector(self.x - other.x, self.y - other.y)
     
     def __repr__(self): #means representation, if you dont have str dunder then this would be printed
         return f"rX:{self.x}, rY:{self.y}"
