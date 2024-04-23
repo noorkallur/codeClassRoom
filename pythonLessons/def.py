@@ -51,14 +51,32 @@
 # print(add_15(10)) #adder will return now as add_15 now has adder which was returned by create_adder, better understand https://www.geeksforgeeks.org/python-closures/?ref=lbp
 
 # # Function decorators
+# # https://www.youtube.com/watch?v=MYAEv3JoenI
 # #  https://www.youtube.com/watch?v=PTBZ674EsvI&list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg&index=59
+
+# def greetFunction(func):
+#     def wrapper(passedName):
+#         print("Hello")
+#         func(passedName)
+#     return wrapper
+
+# # @greetFunction
+# def welcomFunction(name):
+#     print(f"Welcome {name}")
+
+# w = greetFunction(welcomFunction)
+
+# w("noor")
+
 # #function decorator without any args
 # def someDecorator(func):
 #     print(f"decorationg")
-#     func()
+#     return func
 # @someDecorator
 # def someFunction():
 #     print(f"this is a test")
+# someFunction()
+
 # #function decorator with any args
 # def logging_call(func):
 #     def decorated_func(*args, **kwargs): # args -> arguments, kwargs -> keyword args : refer above
@@ -71,17 +89,18 @@
 # def add(a , b):
 #     return a + b
 # add(3 ,5) #call decorator and passes func as an arg to that decorator
-# # another example for decorators time calculator decorator
+
+# another example for decorators time calculator decorator
 # import time
 # import math
 # # decorator to calculate duration taken by a function
 # def calculate_time(func):
-# 	def inner1(*args, **kwargs):
+# 	def wrapper(*args, **kwargs):
 # 		begin = time.time()
 # 		func(*args, **kwargs) #calling the function passed
 # 		end = time.time()
 # 		print("Total time taken in : ", func.__name__, end - begin)
-# 	return inner1
+# 	return wrapper
 # @calculate_time
 # def factorial(num):
 # 	# sleep 2 seconds because it takes very less time

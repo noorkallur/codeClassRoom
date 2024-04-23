@@ -17,6 +17,21 @@ def findPivot(arr):
             s = mid + 1
     return e #if only one or two elements are present return the e 
 
+def findPivotAlt(nums):
+    s = 0;
+    e = len(nums) -1
+    while(s<=e):
+        mid = (s+e)//2
+        if mid != e and nums[mid] > nums[mid + 1]:
+            return mid
+        if mid != s and nums[mid] <  nums[mid - 1]:
+            return mid - 1
+        if nums[mid] > nums[e]:
+            s = mid + 1
+        else:
+            e = mid - 1
+    return - 1
+
 def binsearchIndexBase(arr, target, start, end):
     while(start <= end):
         mid = (start + end)//2
