@@ -7,7 +7,7 @@ def findDisappearedNumbers(nums):
         
     i = 0
     while i < len(nums):
-        if nums[i] != nums[ nums[i] -1 ]  and i != nums[i] - 1:
+        if nums[i] != nums[ nums[i] -1 ]:
             swap(i, nums[i] -1)
         else:
             i+=1
