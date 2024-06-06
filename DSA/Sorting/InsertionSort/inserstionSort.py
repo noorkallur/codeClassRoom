@@ -19,3 +19,17 @@ def insertionSort(nums):
 arr = [5, 4, 3, 2, 1]
 insertionSort(arr)
 print(arr)
+
+def insertionSortNoor(arr):
+    n =len(arr)
+    for i in range(0, n-1):
+        while i >= 0:
+            if arr[i+1] < arr[i]:
+                swap(i, i+1, arr)
+                i -=1
+            else:
+                break
+
+arr = [ 1, 4, 5, 3]
+insertionSortNoor(arr)
+print(arr)
