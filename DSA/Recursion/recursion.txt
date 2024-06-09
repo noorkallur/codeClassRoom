@@ -1,0 +1,43 @@
+https://www.youtube.com/watch?v=M2uO2nMT0Bk&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=23
+
+Recursion: Fucntion calling itself
+
+why?
+It helps us in sloving bigger/complex problems in a simple way
+we can convert the recursion solution into iteration and viceversa
+
+Space complexity: not constant because of recursive calls
+
+Important points:
+1. Identify if you can break down the problem into smaller problems
+2. Write the recursive relations if needed
+3. Draw the recursive tree
+4. Audit the tree
+    1.see the flow, how they are getting in stack
+    2.Identify the order of the flow
+
+clues:
+if probelm has nth number try recursion
+can you break the functionality and the broken functionality uses the same logic
+
+Tail Recursion
+if the recursive Fucntion is the last one called
+
+Non-Tail Recursion
+if there are other operations to be done after the recursive call
+
+Which One is Better? Tail or Non-Tail Recursion?
+Tail recursion is considered better than non-tail recursion because tail recursive functions can be optimized by modern compilers.
+As we have seen above most programming languages use Stack Memory to store the order of method execution. This means when we make any recursive call then that call is pushed inside a Stack Frame.
+In the case of tail recursion, modern compilers know that since it is tail recursive and no other operations will be performed after the recursive call, there is no need to maintain a stack. Thus retaining the current function call in the stack frame is of no use.
+While non-tail recursion fully utilizes the stack frame and uses the value returned from the recursive call. JVM must retain all the stack frames, no matter how many they are, to compute the end result correctly. This leads to memory overuse and sometimes results in errors.
+
+Can We Convert a Non-tail Recursion to a Tail Recursion? Always?
+The answer is YES. We can convert any Non-tail recursive function to a Tail recursive function by passing additional parameters to maintain the state of the recursive call.
+The idea is to maintain the result of calculation throughout the recursive calls, from start to end. Do not wait to compute the result until the terminal condition is met. Carry the intermediate calculation result along with a recursive call in each frame. Thus JVM does not need to maintain the old stack frames, thus saving memory.
+
+def factorial(int n) ;    //Non-tail recursion
+def factorial(int n, int previousMultiplication) ;   //Tail recursion
+
+Sometimes, the conversion will not be easy and require additional changes. If non-tail recursion provides easy-to-read code and does not risk memory issues, we can stick with it to avoid unnecessary complexities in the code
+
