@@ -10,7 +10,7 @@ def selectionSort(nums):
         for j in range(1, length -i): # j = 1 , to check prev element
             if nums[j] > nums[largest]:
                 largest = j
-            swap(largest, length -1 -i, nums)
+        swap(largest, length -1 -i, nums)
         
 arr = [5, 4, 3, 2, 1]
 selectionSort(arr)
