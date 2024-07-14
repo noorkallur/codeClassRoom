@@ -1,4 +1,6 @@
-# MERGE SORT in place using recursion : Merge sort using ONLY original array, we need the track of index
+# MERGE SORT in place using recursion : 
+# * Assuming you know merge sort basics
+# * Merge sort using ONLY original array, we need the track of index
 
 # 1. Before writing recursion function, first think of how "merge" funciton should be
 #       a. it needs start, mid and end 
