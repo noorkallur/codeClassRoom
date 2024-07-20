@@ -1,0 +1,17 @@
+Quick sort:(using recursion)
+1.pick a pivot
+2.move the elements accordingly whether bigger or smaller than pivot
+3.recursive call left side and right side pivot
+REFER quick_sort.png
+
+Definition
+QuickSort is a sorting algorithm based on the Divide and Conquer algorithm that picks an element as a pivot and partitions the given array 
+around the picked pivot by placing the pivot in its correct position in the sorted array.
+
+How to put pivot in the right position
+1.pick mid element as the pivot
+2.from the start find the element which is greater than pivot
+3.from end find the element which is lesser than pivot
+4.swap them left and right elements. This will shuffle the pivot into the right postion
+
+NOTE: the function args are to keep the track of the ends of the array, also the sub array as we move in to recurison calls
