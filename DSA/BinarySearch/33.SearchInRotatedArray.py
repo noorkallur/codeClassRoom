@@ -18,7 +18,7 @@ def findPivot(arr):
     return e #if only one or two elements are present return the e 
 
 def findPivotAlt(nums):
-    s = 0;
+    s = 0
     e = len(nums) -1
     while(s<=e):
         mid = (s+e)//2
