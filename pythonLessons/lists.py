@@ -84,6 +84,19 @@
 # print(shallow_copy)
 # print(56 in original_list)
 
+# import copy
+
+# # Original list of lists
+# original_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# # Deep copy the list
+# copied_list = copy.deepcopy(original_list)
+
+# # Verify the copy
+# print("Original List:", original_list)
+# print("Copied List:", copied_list)
+
+
 # # wap to remove the duplicates in a list
 # import time
 
