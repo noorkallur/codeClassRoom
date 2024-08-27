@@ -12,6 +12,7 @@ def quick_sort(nums, low, high):
     m = (s+e)//2
     piv = nums[m]
     
+    #shuffle till the mid is at the right position
     while s <=e:
         while nums[s] < piv: # finding the left large element
             s +=1
