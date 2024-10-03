@@ -1,0 +1,16 @@
+Quickselect: 
+It is a selection algorithm to find the k-th smallest element in an non sorted array. It is kind of related to the quick sort sorting algorithm.
+we know k - 1 will be index of the element we want
+select a pivot and shuffle it. we know the index of this. if it matches with k-1, voila thats our answer
+if we does not match.. we know if pivot index is greater than k-1 ,that means our answer is on the left side
+if the pivot index is less than k-1, that means our answer is on the right side
+
+partition:
+assumes the last element as pivot and shuffles it to the right place
+for shuffling part:
+keep all the elements smaller than pivot to the left after moving all the smaller elements move the pivot next to the smaller elements
+Now, how to do the above
+use two pointer method to acheive it
+1. j is to find the smaller element than pivot by simply going through the loop
+2. i is left most index non shuffled. 
+3. after finding the smaller element move to left of array ( swap with i), increment i and j
