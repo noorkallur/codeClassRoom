@@ -12,7 +12,7 @@ def partition(arr, l, r): # look at the txt to understand intiution better
             arr[i], arr[j] = arr[j], arr[i]
             i +=1
             
-    arr[i], arr[r] = arr[r], arr[j]
+    arr[i], arr[r] = arr[r], arr[i]
     return i
 
 def quick_slect(arr, l, r, k):
