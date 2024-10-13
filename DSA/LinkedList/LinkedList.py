@@ -135,15 +135,15 @@ class LinkedList:
             
         print(ll)
         
-        
-obj = LinkedList()
-obj.insertAtEnd(1)
-obj.insertAtEnd(2)
-obj.insertAtIndex(2, 3)
-obj.insertAtEnd(5)
-obj.printLinkedList()
-obj.deleteNodeOfVal(3)
-obj.printLinkedList()
-obj.reverseLinkedList()
-obj.printLinkedList()
+if __name__ == "__main__":        
+    obj = LinkedList()
+    obj.insertAtEnd(1)
+    obj.insertAtEnd(2)
+    obj.insertAtIndex(2, 3)
+    obj.insertAtEnd(5)
+    obj.printLinkedList()
+    obj.deleteNodeOfVal(3)
+    obj.printLinkedList()
+    obj.reverseLinkedList()
+    obj.printLinkedList()
 
