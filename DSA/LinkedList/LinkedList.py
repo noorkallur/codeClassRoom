@@ -112,7 +112,20 @@ class LinkedList:
         
         print(f"No node with value {val}")
         
+    
+    def reverseLinkedList(self):
+        curr_node = self.head
+        prevnode = None
         
+        while curr_node != None:
+            temp_next = curr_node.next
+            curr_node.next = prevnode
+            prevnode = curr_node
+            curr_node = temp_next
+        
+        self.head = prevnode
+    
+          
     def printLinkedList(self):
         current_node = self.head
         ll = []
@@ -131,3 +144,6 @@ obj.insertAtEnd(5)
 obj.printLinkedList()
 obj.deleteNodeOfVal(3)
 obj.printLinkedList()
+obj.reverseLinkedList()
+obj.printLinkedList()
+
