@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/daily-temperatures/
 from typing import List
 
-class NoorSolution: # o(n) too slow
+class NoorSolution: # o(n2) too slow
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:  
         ans = []
         curr_stk = []
