@@ -1,0 +1,12 @@
+Big O notation:
+what is O(n^3) 
+this is the max realtionship between the time and number of inputs. It could have taken O(n^2) or O(n) but the O(n^3) is the upper bound. 
+
+
+Time complexity is the realtionship about how the time grows as the input grows : https://youtu.be/mV3wrLBbuuE?si=8730I8iNpC2Sxc4m&t=722
+
+what to consider when thinking about complexity:
+1. Worst case
+2. Look for large data (as the small data does not give the trend of the algorithm we need large data to consider the trend)
+3. Ignore the constants (constants only give the amplitude but not the trend. Always think in graph terms)
+4. Ignore the less the dominant terms
