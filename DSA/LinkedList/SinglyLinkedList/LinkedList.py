@@ -125,6 +125,27 @@ class LinkedList:
         
         self.head = prevnode
     
+    def insert_via_recurison_helper(self, index, val, curr_node):
+        if curr_node.next == None:
+            return
+        
+        if index == 1:
+            newNode = Node(val)
+            newNode.next = curr_node.next
+            curr_node.next = newNode
+            return
+        
+        self.insert_via_recurison_helper(index - 1, val, curr_node.next)
+        
+    def insert_via_recurison(self, index, val):
+        if index == 0:
+            newNode = Node(val)
+            newNode.next = self.head
+            self.head = newNode 
+            return
+        
+        self.insert_via_recurison_helper(index, val, self.head)
+        
           
     def printLinkedList(self):
         current_node = self.head
@@ -142,8 +163,10 @@ if __name__ == "__main__":
     obj.insertAtIndex(2, 3)
     obj.insertAtEnd(5)
     obj.printLinkedList()
-    obj.deleteNodeOfVal(3)
+    obj.insert_via_recurison(3, 4)
     obj.printLinkedList()
-    obj.reverseLinkedList()
+    obj.insert_via_recurison(0, 0)
     obj.printLinkedList()
+    
+
 
