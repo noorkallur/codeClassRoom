@@ -1,0 +1,20 @@
+Fast and slow pointer:
+
+1. Cycle detection : fast and slow will eventually meet at some pointer
+    how will they meet? please draw on a paper before reading
+        In a cycle the fast will eventually pass the slow pointer. Hence there are only two possible cases it will eventually lead
+        1. where the f is two steps behind the slow ==> f, _, s ==> sf 
+        2. fast is one step behind slow ==> f, s ==> s, f ==> fs
+
+
+2. Length of cycle:
+    please draw on a paper before reading
+    we know they meet at a point. so keep the fastpointer at the same place and traverse the slow pointer
+    when the slow pointer reaches the fast pointer we know it has traversed the cycle 
+
+
+3. Find the starting node of the cycle
+    use Floyd's Tortise and hare method: https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/#how-does-floyds-algorithm-works
+    Key points afer understanding the floyds algorithm
+    1. slow and fast will never meet at the start of the cycle
+    2. distance b/w the head and start of the cycle == distance b/w fast slow intersection and start of the cycle.
