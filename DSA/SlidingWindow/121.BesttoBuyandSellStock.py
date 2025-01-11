@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 def maxProfitNoor(prices):
     """_summary_
     DOESNOT work. Code failed
@@ -20,7 +21,7 @@ def maxProfitNoor(prices):
 
 
 def maxProfitDev(prices):
-    minPrice = 10001
+    minPrice = prices[0]
     maxDiff = 0
     
     for price in prices:
@@ -29,7 +30,7 @@ def maxProfitDev(prices):
         minPrice = min(minPrice, price) # simpler looking code but takes time to process as using internal methods
         # if maxDiff < price - minPrice:
         #     maxDiff = price - minPrice
-        maxDiff = (maxDiff, price -minPrice) 
+        maxDiff = max(maxDiff, price -minPrice) 
         
     return maxDiff
 
