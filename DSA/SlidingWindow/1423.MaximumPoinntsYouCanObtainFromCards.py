@@ -11,6 +11,16 @@ def maxScore(cardPoints, k):
             ans = total - curr_sum 
     return ans
 
+def maxScoreNoorAlt(nums, k):
+    total_sum = sum(nums)
+    winSize = len(nums) - k
+    currSum = sum(nums[:winSize])
+    maxSubSum = total_sum - currSum
+    for winEnd in range(winSize, len(nums)):
+        currSum = currSum + nums[winEnd] - nums[winEnd-winSize]
+        maxSubSum = max(maxSubSum, total_sum - currSum)
+    return maxSubSum
+
 cardPoints = [1,2,3,4,5,6,1]
 k = 3
 cardPoints = [2,2,2]
