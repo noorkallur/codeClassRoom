@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
 def lengthOfLongestSubstring(string):
     hash_set = set()
     winStart = 0
@@ -12,7 +13,18 @@ def lengthOfLongestSubstring(string):
         max_sub_len = max(len(hash_set), max_sub_len)
     
     return max_sub_len
-    
+
+# another variation where we return substring too.. done by noor 
+def LongestSubstring(s):
+    substr = ""
+    maxSubStr = substr
+    for winend in range(len(s)):
+        while s[winend] in substr:
+            substr = substr[1:]
+        substr = substr + s[winend]
+        if len(maxSubStr) < len(substr):
+            maxSubStr = substr 
+    return maxSubStr
 
 s = "abcabcbb"
 # s = "bbbbb"
