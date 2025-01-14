@@ -26,7 +26,7 @@ def findPivotAlt(nums):
             return mid
         if mid != s and nums[mid] <  nums[mid - 1]:
             return mid - 1
-        if nums[mid] > nums[e]:
+        if nums[mid] > nums[len(nums) -1]:
             s = mid + 1
         else:
             e = mid - 1
