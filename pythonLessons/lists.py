@@ -75,8 +75,8 @@
 # shallow_copy[1][0] = 99 # since the both copies point to the same reference, its going to change for both 
 # shallow_copy[2] = 1000 # its only goin to change in one copy
 
-# print("Original List:", original_list)  # [[1, 2, 3], [99, 5, 6], [7, 8, 9]]
-# print("Shallow Copy:", shallow_copy)    # [[1, 2, 3], [99, 5, 6], [7, 8, 9]]
+# print("Original List:", original_list) # [[1, 2, 3], [99, 5, 6], 56]
+# print("Shallow Copy:", shallow_copy)   # [[1, 2, 3], [99, 5, 6], 1000]
 
 # print(f"id01 - {id(original_list)}")
 # print(f"ids2 - {id(shallow_copy)}")
@@ -131,4 +131,40 @@
 
 
 # # List comprehension
-new_list = [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+numbers = [1, 2, 3, 4]
+doubled_numbers = [num * 2 for num in numbers]
+print(doubled_numbers)  # Output: [2, 4, 6, 8]
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_odd = ["Even" if num % 2 == 0 else "Odd" for num in numbers]
+print(even_odd)  # Output: ['Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even']
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+fruits_with_a = [fruit for fruit in fruits if "a" in fruit]
+print(fruits_with_a)  # Output: ['apple', 'banana', 'mango']
+
+# combining two lists into one 
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+
+combined = [(a[i], b[i]) for i in range(len(a))]
+print(combined)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+# using zip
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+
+combined = list(zip(a, b))
+print(combined)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+# adding two lists elements into one list
+nums1 = [1, 2, 3, 4, 5]
+nums2 = [6, 7, 8, 9, 0, 567, 7, 8]
+newlist = [x + y for x, y in zip(nums1, nums2)] #zip exhausts till the shortest lists and also it returns tuple by default
+print(newlist)
+
+new_list = [(x, y) for x in [1,2,3,5] for y in [3,1,4,5] if x != y]
