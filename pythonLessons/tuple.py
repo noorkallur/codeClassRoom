@@ -14,7 +14,7 @@
 
 # # to create a tuple use () and once initiated cannot be changed 
 
-player_coordinates = (1 , 2, 3, 4)
+player_coordinates = (1 , 2, 3, 4, "NA")
 print(player_coordinates[0])
 # # player_coordinates[0] = 99 // doesn't support assignment
 x, y, z, *others = player_coordinates
