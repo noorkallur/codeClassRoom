@@ -15,6 +15,9 @@
 # total_profit( 600,  discount= 0, operating_cost= 76.8,)# throws no error
 
 # # *args and **kwargs in func parameters
+# one start means its arguments positional
+# two stars means its keyword arguments and its mapped to a key
+# These are commonly used for creating flexible functions, decorators, and APIs.
 # def myFun(arg1, arg2, arg3):
 # 	print("arg1:", arg1)
 # 	print("arg2:", arg2)
