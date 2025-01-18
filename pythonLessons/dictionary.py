@@ -54,5 +54,17 @@ for word in words:
     output += swear_words.get(word, word) + " "
 print(output)
 
+# list of methods
+# clear(): Removes all items from the dictionary.
+# copy(): Returns a shallow copy of the dictionary.
+# fromkeys(iterable, value): Creates a new dictionary with keys from the iterable and values set to the specified value.
+# get(key, default): Returns the value for the specified key if it exists, otherwise returns the default value.
+# items(): Returns a view object that displays a list of the dictionary's key-value pairs.
+# keys(): Returns a view object that displays a list of all the keys in the dictionary.
+# pop(key, default): Removes and returns the value for the specified key. If the key is not found, the default value is returned.
+# popitem(): Removes and returns the last inserted key-value pair as a tuple.
+# setdefault(key, default): Returns the value of the specified key if it exists. If not, inserts the key with the specified default value.
+# update([other]): Updates the dictionary with elements from another dictionary or iterable of key-value pairs.
+# values(): Returns a view object that displays a list of all the values in the dictionary.
 
 # # dict comprehensions:
