@@ -93,17 +93,18 @@
 #     return a + b
 # add(3 ,5) #call decorator and passes func as an arg to that decorator
 
-# another example for decorators time calculator decorator
+# # another example for decorators time calculator decorator
 # import time
 # import math
 # # decorator to calculate duration taken by a function
 # def calculate_time(func):
-# 	def wrapper(*args, **kwargs):
-# 		begin = time.time()
-# 		func(*args, **kwargs) #calling the function passed
-# 		end = time.time()
-# 		print("Total time taken in : ", func.__name__, end - begin)
-# 	return wrapper
+#     def wrapper(*args, **kwargs):
+#         begin = time.time()
+#         print(f"begining time:{begin}")
+#         func(*args, **kwargs) #calling the function passed
+#         end = time.time()
+#         print("Total time taken in : ", func.__name__, end - begin)
+#     return wrapper
 # @calculate_time
 # def factorial(num):
 # 	# sleep 2 seconds because it takes very less time
