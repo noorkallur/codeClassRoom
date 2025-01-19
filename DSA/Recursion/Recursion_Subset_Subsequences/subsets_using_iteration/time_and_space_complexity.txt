@@ -1,0 +1,54 @@
+
+Process Breakdown
+For each element in the input list, we add it to all existing subsets. Here's how it works for nums = [1, 2, 3]:
+
+Start with res = [[]].
+For num = 1:
+Existing subsets: []
+New subsets: [1]
+Updated res: [[], [1]]
+
+For num = 2:
+Existing subsets: [], [1]
+New subsets: [2], [1, 2]
+Updated res: [[], [1], [2], [1, 2]]
+
+For num = 3:
+Existing subsets: [], [1], [2], [1, 2]
+New subsets: [3], [1, 3], [2, 3], [1, 2, 3]
+Updated res: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+
+Complexity Analysis
+Time Complexity: Each element in nums is processed by iterating over all existing subsets and creating new ones. For each element, the number of subsets doubles. Therefore, the total number of operations is proportional to ( n \cdot 2^n ), where ( n ) is the length of the input list. This is because:
+For the first element, we process 1 subset.
+For the second element, we process 2 subsets.
+For the third element, we process 4 subsets.
+And so on, up to ( 2^n ) subsets.
+
+#####################################
+Space Management in Iterations
+When generating subsets, the algorithm does not destroy the previously created space. Instead, it builds upon the existing subsets by creating new ones. Here's a step-by-step explanation:
+
+Initial State: Start with res = [[]], which is a list containing one empty subset.
+
+First Element: For the first element, say 1, the algorithm creates new subsets by adding 1 to each existing subset:
+
+Existing subsets: []
+New subsets: [1]
+Updated res: [[], [1]]
+Second Element: For the second element, say 2, the algorithm creates new subsets by adding 2 to each existing subset:
+
+Existing subsets: [], [1]
+New subsets: [2], [1, 2]
+Updated res: [[], [1], [2], [1, 2]]
+Third Element: For the third element, say 3, the algorithm creates new subsets by adding 3 to each existing subset:
+
+Existing subsets: [], [1], [2], [1, 2]
+New subsets: [3], [1, 3], [2, 3], [1, 2, 3]
+Updated res: [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+Why Space Complexity is ( O(n \cdot 2^n) )
+No Destruction of Previous Space: The algorithm does not destroy the previously created subsets. Instead, it keeps all existing subsets and adds new ones.
+Doubling of Subsets: With each iteration, the number of subsets doubles. This means that for each element in the input list, the algorithm creates new subsets by adding the current element to each existing subset.
+Storage of All Subsets: Since all subsets are stored in res, the space required grows exponentially with the number of elements in the input list.
+Summary
+The space complexity is ( O(n \cdot 2^n) ) because the algorithm retains all previously created subsets and adds new ones at each iteration. This results in an exponential growth in the number of subsets, and each subset can have up to ( n ) elements. Therefore, the total space required accounts for both the number of subsets and their sizes.
