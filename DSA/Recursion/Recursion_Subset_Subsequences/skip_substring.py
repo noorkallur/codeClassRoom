@@ -10,23 +10,23 @@ def skipSubstring(str, subStr):
 str = "abbappleccda"
 print(skipSubstring(str, "apple"))
 
-#  // C++ code for the same 
-# #include <iostream>
-# #include <cstring>
-# void charAremoval(char* str, char* res, int& index)
+# // C++ code for the same 
+# include <iostream>
+# include <cstring>
+# void charAremoval(char* str, char* res, int& index, char* substr)
 # {
 #     if(*str == '\0'){
 #         res[index] = '\0';
 #         return;
 #     }
-#     if(strncmp(str, "apple", 5) == 0)
+#     if(strncmp(str, substr, strlen(substr)) == 0)
 #     {
-#         charAremoval(str+ 5, res, index);
+#         charAremoval(str+ strlen(substr), res, index, substr);
 #     }
 #     else{
 #         res[index] = *str;
 #         index++;
-#         charAremoval(str+ 1, res, index);
+#         charAremoval(str+ 1, res, index, substr);
 #     }
 # }
 
@@ -35,7 +35,8 @@ print(skipSubstring(str, "apple"))
 #     char arr[] = "abcapplecad";
 #     char res[] =  "";
 #     int index = 0;
-#     charAremoval(arr, res, index);
+#     char substr[] = "apple";
+#     charAremoval(arr, res, index, substr);
 #     std::cout<< res<<std::endl;
 #     return 0;
 # }
