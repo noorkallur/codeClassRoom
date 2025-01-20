@@ -54,7 +54,7 @@
 # print(r2)
 
 # # Class variables :: these are defined within the class construction. Because they are owned by the class itself, class variables are shared by all instances of the class. 
-# # They therefore will generally have the same value for every instance unless you are using the class variable to initialize a variable
+# # They therefore will generally have the same value for every instance but, you can change the value for each instance or all instances(Robot2.robot_total)
 # class Robot2:
 #     robot_total = 0
 #     def __init__(self, name , color, weight):
@@ -71,4 +71,10 @@
 # r2 = Robot2("Tom", "Red", "40Kgs")
 # r3 = Robot2("Jerry", "blue", 6)
 # print(Robot2.robot_total)
+# r3.robot_total = 0 
+# print(r3.robot_total) 
+# print(r2.robot_total) 
+# Robot2.robot_total = 100
+# print(r3.robot_total) 
+# print(r2.robot_total) 
 
