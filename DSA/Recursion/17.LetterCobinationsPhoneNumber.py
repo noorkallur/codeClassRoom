@@ -1,4 +1,7 @@
 # https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+
+# https://youtu.be/9ByWqPzfXDU?si=Ac5-2IfjXR3b_NSX&t=109
+# Noor did this using similar logic as subsets using recursion
 def letterCombinations(digits: str):
     if len(digits) == 0:
         return [] 
