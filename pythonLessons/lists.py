@@ -46,6 +46,22 @@
 ##A shallow copy means constructing a new collection object and then populating it with references to the child objects found in the original.
 ##In essence, a shallow copy is only one level deep. The copying process does not recurse and therefore won’t create copies of the child objects themselves.
 
+# shallow copy example
+ls1  = [ 1, 2, 3, [3, 4, 5]]
+print(id(ls1))
+ls2  = ls1
+print(id(ls2))
+ls3 = ls1[:] # shallow copying each element here, list 1, 2, 3 is immutable(passed as new immutable objs), [3, 4, 5] is mutable(passed as reference obj of the mutable)
+print(id(ls3))
+ls1.append(4)
+print(ls1)
+print(ls2)
+print(ls3)
+ls1[3][0] = 100
+print(ls1)
+print(ls2)
+print(ls3)
+
 # #A deep copy makes the copying process recursive. It means first constructing a new collection object and then recursively populating it with copies of the child objects found in the original.
 # #Copying an object this way walks the whole object tree to create a fully independent clone of the original object and all of its children
 ## Example is given below
