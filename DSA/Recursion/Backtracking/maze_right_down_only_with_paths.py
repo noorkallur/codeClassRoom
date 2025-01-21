@@ -31,6 +31,7 @@ def mazePathCount(destCoordinates):
             return 
         
         # recursion logic
+        # tip: make sure you are adding list of lists to pathcoord , this maitains coordinates in list
         counter(destCoordinates, [currPos[0]+1,currPos[1]], pathCoord+ [[currPos[0]+1,currPos[1]]] , res)
         counter(destCoordinates, [currPos[0],currPos[1]+1], pathCoord+ [[currPos[0],currPos[1]+1]], res)
     
