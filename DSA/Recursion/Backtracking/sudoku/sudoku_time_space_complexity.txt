@@ -1,0 +1,2 @@
+https://youtu.be/nC1rbW2YSz0?si=Z5Akrs5fzhgRS1LF&t=4623
+I dont completely understand how it is O(9^{N^2}), not going to waste my time understanding it now, come back when i know the time and space complexity very well

@@ -32,7 +32,7 @@ def is_num_valid(board, num, row, col):
 def dispboard(board):
         for row in board:
             print(" ".join(str(item) for item in row))
-            print("")
+            # print("")
             
 # we are iterating through every col and if we find empty col then we start placing numbers one by one
 def solver_engine(board, row, col):
