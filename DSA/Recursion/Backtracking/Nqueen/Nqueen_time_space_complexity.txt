@@ -1,0 +1,40 @@
+Recursive Calls and Implied Nested Loops
+
+For Loop:
+The for loop iterates through each column in the current row.
+This loop runs (N) times for each row.
+for col in range(len(board[0])):
+    if isQueenSafe(board, row, col):
+        board[row][col] = 1
+        count += countSoultions(board, row + 1)
+        board[row][col] = 0
+
+Recursive Calls:
+The recursive call to countSoultions for the next row creates an implied nested loop.
+For each column in the current row, the function calls itself to place a queen in the next row, leading to another loop over (N) columns.
+Implied Nested Loops
+
+First Row: (N) choices.
+
+Second Row: For each of the (N) choices in the first row, you have (N) choices in the second row.
+
+Third Row: For each combination of choices in the first two rows, you have (N) choices in the third row.
+This pattern continues, leading to a recursive tree with (N) branches at each level.
+
+Total Number of Nodes
+The total number of nodes in this recursive tree is proportional to (N x N X N x N = N^N).
+However, due to the constraints (column and diagonal attacks), many branches are pruned, reducing the actual number of nodes.
+
+
+Why (O(N^{N-1}))?
+Implied Nested Loops: The recursive calls create an implied nested loop structure, leading to (O(N^2)) for two rows, (O(N^3)) for three rows, and so on.
+For a board of size (N), this structure goes up to (N^{(N-1)}) because you have (N) choices at each of the (N-1) levels of recursion (excluding the first row).
+
+Why Addition Instead of Multiplication?
+Independent Contributions: The terms (O(N) \times O(N!)) and (O(N^{(N-1)})) represent different aspects of the algorithm's complexity. They are not directly dependent on each other but rather contribute independently to the overall complexity.
+Dominant Term: In complexity analysis, we focus on the term that grows the fastest as (N) increases. Since (O(N!)) grows much faster than (O(N^{(N-1)})), it dominates the overall complexity.
+
+Summary
+O(N!): Represents the total number of permutations of queen placements.
+O(N^{(N-1)}): Represents the implied nested loops created by the recursive calls.
+Addition: We use addition to combine these independent contributions, but the factorial term (O(N!)) dominates the overall complexity.
