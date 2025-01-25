@@ -3,6 +3,7 @@
 # For example there are 0 ways to place queen(one in each row) in 3 x 3 board
 # For example there are 2 ways to place queen(one in each row) in 4 x 4 board
 # Look at the diagram in nqueens_refernce.png
+# https://youtu.be/nC1rbW2YSz0?si=0bZJkgt8y8LxQ4m0&t=1216
 ##########################################################################################################
 def isQueenSafe(board, row, col):
     # veritcal cell attack check
