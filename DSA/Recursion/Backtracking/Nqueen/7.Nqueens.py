@@ -1,8 +1,8 @@
 # Return the number of ways you can place a queen in NxN chess board without attacking eachother
-# Rule: you have to place the one queen in all of the rows
-# For example there are 0 ways to place queen(one in each row) in 3 x 3 board
-# For example there are 2 ways to place queen(one in each row) in 4 x 4 board
-# Look at the diagram in nqueens_refernce.png
+# Rule: you have to place N queens on the board
+# For example there are 0 ways to place 3 queens in 3 x 3 board
+# For example there are 2 ways to place 4 queens in 4 x 4 board
+# Look at the diagram in nqueen_q_arrangements.png
 # https://youtu.be/nC1rbW2YSz0?si=0bZJkgt8y8LxQ4m0&t=1216
 ##########################################################################################################
 def isQueenSafe(board, row, col):
