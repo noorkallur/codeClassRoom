@@ -139,6 +139,9 @@ class Solution:
             curr_node = next_node
  
     def reverseBetween(self, left, right):
+        '''
+        this logic is simpler
+        '''
         if not self.head or left == right:
             return
 
