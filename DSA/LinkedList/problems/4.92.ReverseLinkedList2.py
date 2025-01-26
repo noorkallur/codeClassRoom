@@ -1,3 +1,7 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -134,7 +138,27 @@ class Solution:
             position += 1
             curr_node = next_node
  
- 
+    def reverseBetween(self, left, right):
+        if not self.head or left == right:
+            return
+
+        dummy = Node(None)
+        dummy.next = self.head
+        prev = dummy
+
+        for _ in range(left - 1):
+            prev = prev.next
+        
+        print(f"prev {prev.data}")
+        cur = prev.next
+        # insert one at the left side each run
+        for _ in range(right - left):
+            temp = cur.next
+            cur.next = temp.next
+            temp.next = prev.next
+            prev.next = temp
+            self.print_linked_list()
+        return dummy.next
 # ll1 = LinkedList()
 # ll1.add_node_at_end(1)
 # ll1.add_node_at_end(2)
