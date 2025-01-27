@@ -111,7 +111,7 @@ class DoublyLinkedList2():
         new_node =  Node(val)
         curr_node.next = new_node
         new_node.prev = curr_node 
-        self.tail = new_node
+        self.tail = new_node # keeping track of tail
     
     
     def remove_at_end(self):
@@ -122,10 +122,10 @@ class DoublyLinkedList2():
         if self.head:
             next_node = self.head.next
             self.head = next_node
-            if self.head == None:
+            if self.head == None: # this means dll is empty, then we remove tail pointer as well
                 self.tail = None
                 return
-            self.head.prev = None
+            self.head.prev = None # point to None of head.prev
                 
     def delete_at_index(self, index):
         if index == 0:
@@ -135,7 +135,7 @@ class DoublyLinkedList2():
         curr_idx = 0
         while curr_node:
             if curr_idx == index:
-                if curr_node == self.tail:
+                if curr_node == self.tail: # if its curr_node is tail
                     self.remove_at_end()
                     return
                 curr_node.prev.next = curr_node.next
