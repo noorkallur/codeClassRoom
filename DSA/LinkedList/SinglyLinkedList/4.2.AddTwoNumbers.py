@@ -59,3 +59,45 @@ def addTwoNumbers(l1:Node, l2:Node):
     print(ll)
 
 addTwoNumbers(obj.head, obj2.head)
+
+
+# # this is how is solved it later, pretty long but it works if i had spent some time i would have probally done the same as above
+# def addTwoNumbers(self, l1, l2):
+#     curr_node = Node(None)
+#     ref = curr_node
+#     lend = 0
+
+#     while l1 and l2:
+#         add_val = (l1.data + l2.data)%10
+#         print(f"add{add_val}")
+#         print(f"lend{lend}")
+#         newNode = Node(add_val + lend)
+#         lend = (l1.data + l2.data + lend)//10
+#         curr_node.next = newNode
+#         curr_node = curr_node.next
+#         l1 = l1.next
+#         l2 = l2.next
+
+#     while l1:
+#         print(f"add{(l1.data + lend)%10}")
+#         newNode = Node((l1.data + lend)%10)
+#         print(f"lend{lend}")
+#         lend = (l1.data+lend)//10
+#         curr_node.next = newNode
+#         curr_node = curr_node.next
+#         l1 = l1.next
+        
+#     while l2:
+#         print(f"add{(l2.data + lend)%10}")
+#         newNode = Node((l2.data + lend)%10)
+#         lend = (l2.data + lend)//10
+#         print(f"lend{lend}")
+#         curr_node.next = newNode
+#         curr_node = curr_node.next
+#         l2 = l2.next
+        
+
+#     newNode = Node(lend)
+#     curr_node.next = newNode
+        
+#     self.head = ref.next
