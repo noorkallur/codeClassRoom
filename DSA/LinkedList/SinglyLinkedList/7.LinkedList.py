@@ -275,7 +275,7 @@ class LinkedList_2:
             return self.insert_at_begining(val)
         
         def helperFunction(itr:Node, curr_idx):
-            while itr:
+            while itr.next:
                 if curr_idx == index:
                     new_node = Node(val)
                     new_node.next = itr.next
