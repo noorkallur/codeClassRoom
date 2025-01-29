@@ -70,3 +70,53 @@ def reorderList(head:ll.Node):
     
 reorderList(obj.head)
 reorderList(obj2.head)
+
+
+# # rewrote from memory
+#     def reorderList(self):
+        
+#         if self.head == None or self.head.next == None:
+#             return 
+        
+#         fast = self.head.next
+#         slow = self.head
+
+#         while fast != None and fast.next != None:
+#             slow = slow.next
+#             fast = fast.next.next
+
+#         # reverse the liked list
+#         rll = slow.next
+#         slow.next = None
+#         prev = None
+#         while rll.next:
+#             next_node = rll.next
+#             rll.next = prev
+#             prev = rll
+#             rll = next_node
+#         rll.next = prev
+        
+#         self.print_ll(rll)
+#         #merge the two lists now
+#         ll = self.head
+#         self.print_ll(ll)
+        
+#         mergedll = Node(None)
+#         ansRef = mergedll
+        
+#         while ll and rll:
+#             mergedll.next = ll
+#             ll = ll.next
+#             mergedll = mergedll.next
+            
+#             mergedll.next = rll
+#             rll = rll.next
+#             mergedll = mergedll.next
+            
+            
+#         if ll == None:
+#             mergedll.next = rll
+#         elif rll == None:
+#             mergedll.next = ll
+          
+#         self.head = ansRef.next

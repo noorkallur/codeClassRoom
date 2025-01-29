@@ -1,3 +1,10 @@
+In a linked list with a cycle, the fast and slow pointers will eventually meet. Here's a brief explanation of how it works:
+
+Initialization: Both pointers start at the head of the linked list.
+Movement: The slow pointer moves one step at a time, while the fast pointer moves two steps at a time.
+Meeting Point: If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the cycle.
+
+
 Fast and slow pointer:
 
 1. Cycle detection : fast and slow will eventually meet at some pointer
