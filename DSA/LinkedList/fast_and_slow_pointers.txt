@@ -1,24 +1,33 @@
-In a linked list with a cycle, the fast and slow pointers will eventually meet. Here's a brief explanation of how it works:
+Fast and slow pointer:
 
 Initialization: Both pointers start at the head of the linked list.
 Movement: The slow pointer moves one step at a time, while the fast pointer moves two steps at a time.
 Meeting Point: If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the cycle.
 
 
-Fast and slow pointer:
+Fast and slow pointer usage:
 
-1. Cycle detection : fast and slow will eventually meet at some pointer
-    how will they meet? please draw on a paper before reading
-        In a cycle the fast will eventually pass the slow pointer. Hence there are only two possible cases it will eventually lead
-        1. where the f is two steps behind the slow ==> f, _, s ==> sf 
-        2. fast is one step behind slow ==> f, s ==> s, f ==> fs
-
-
-2. Length of cycle:
+1. Length of cycle:
     please draw on a paper before reading
     we know they meet at a point. so keep the fastpointer at the same place and traverse the slow pointer
     when the slow pointer reaches the fast pointer we know it has traversed the cycle 
 
+2. Cycle detection : fast and slow will eventually meet at some pointer
+    how will they meet? please draw on a paper before reading
+        In a cycle the fast will eventually pass the slow pointer. Hence there are only two possible cases it will eventually lead
+        since one increments with 1 and the other with 2, mathematically they have to meet
+        1. where the f is two steps behind the slow ==> f, _, s ==> sf 
+        2. fast is one step behind slow ==> f, s ==> s, f ==> fs
+
+    what is the worst case of cycles the pointer have to go to meet at an intersection?
+        The slow pointer takes ( m + k ) steps to meet the fast pointer.
+        The fast pointer takes ( 2(m + k) ) steps to meet the slow pointer.
+        Thus, the total number of steps is ( O(n) ), but the actual number of steps can be up to ( 2n ) in the worst case.
+
+    Can It Be Worse Than ( 2n )?
+        No, it cannot be worse than ( 2n ). The fast pointer will always catch up to the slow pointer within ( 2n ) steps because:
+        The slow pointer moves ( n ) steps in the worst case.
+        The fast pointer moves ( 2n ) steps in the worst case.
 
 3. Find the starting node of the cycle
     use Floyd's Tortise and hare method: https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/#how-does-floyds-algorithm-works
