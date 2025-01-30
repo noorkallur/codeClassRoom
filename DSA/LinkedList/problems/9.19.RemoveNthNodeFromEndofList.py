@@ -54,3 +54,26 @@ def removeNthFromEnd(head:ll.Node, n):
 
 removeNthFromEnd(obj.head, 5)
     
+
+# rewrote the solution from memory, its the same principle
+    
+# def removeNthFromEnd(self, head, n):
+        
+#     dummy = Node(None)
+#     dummy.next = head
+#     ref = dummy
+#     slow = dummy
+#     fast = dummy
+    
+#     while n!= 0:
+#         fast = fast.next
+#         n -=1
+    
+#     while fast and fast.next:
+#         slow = slow.next
+#         fast = fast.next
+    
+#     #slow is right below the n th pos
+#     slow.next = slow.next.next
+    
+#     return ref.next
