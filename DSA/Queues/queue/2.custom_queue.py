@@ -6,6 +6,7 @@ class Node:
 class CustomQueue:
     def __init__(self):
         self.head = None
+        self.tail = None
         self.qsize = 0
         
     def printQ(self):
@@ -19,12 +20,11 @@ class CustomQueue:
     def push(self, val):
         if self.head == None:
             self.head = Node(val)
+            self.tail = self.head
             return
-        curr_node = self.head
-        while curr_node.next:
-            curr_node = curr_node.next
-            
-        curr_node.next = Node(val)
+
+        self.tail.next = Node(val) 
+        self.tail = self.tail.next
         self.qsize += 1
         
 
