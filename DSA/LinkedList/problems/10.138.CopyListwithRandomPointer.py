@@ -30,3 +30,30 @@ def copyRandomList(head:Node):
         currNode = currNode.next
     
     return old_to_new_map[head]
+
+# revisited again mostly similar but differnt
+class Solution(object):
+    def copyRandomList(self, head):
+        itr = head
+        old_new_add_map = {}
+        ans = Node(0)
+        ref = ans
+        
+        while itr != None:
+            ans.next = Node(itr.val)
+            old_new_add_map[itr] = ans.next
+            itr = itr.next
+            ans = ans.next
+            
+        ans.next = None
+        old_new_add_map[None] = None
+        
+
+        itr_ans = ref.next
+
+        while itr_ans and head:
+            itr_ans.random = old_new_add_map[head.random]
+            itr_ans = itr_ans.next
+            head = head.next
+
+        return ref.next
