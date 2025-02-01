@@ -1,0 +1,38 @@
+Deque:
+
+A deque (short for "double-ended queue") is a data structure that allows you to add and remove elements from both ends efficiently.
+In Python, the collections module provides a deque class that is optimized for fast appends and pops from both the left and right ends.
+
+This queue internally is desgined with doubly linked list principles ie node , next address and prev address 
+
+1.append(x): Adds x to the right end of the deque.
+2.appendleft(x): Adds x to the left end of the deque.
+3.pop(): Removes and returns an element from the right end of the deque.
+4.popleft(): Removes and returns an element from the left end of the deque.
+5.extend(iterable): Extends the deque by adding elements from the iterable to the right end.
+6.extendleft(iterable): Extends the deque by adding elements from the iterable to the left end (in reverse order).
+7.clear(): Removes all elements from the deque.
+8.rotate(n): Rotates the deque n steps to the right. If n is negative, rotates to the left.
+9.reverse(): Reverses the elements of the deque in place.
+10.count(x): Counts the number of occurrences of x in the deque.
+11.remove(value): Removes the first occurrence of value in the deque.
+12.index(value, [start, [stop]]): Returns the position of the first occurrence of value (optional start and stop parameters can be used to limit the search).
+
+
+
+In C++, the equivalent of Python's deque is the std::deque class from the Standard Template Library (STL). Here are some key methods of std::deque:
+
+1.push_back(value): Adds value to the end of the deque.
+2.push_front(value): Adds value to the front of the deque.
+3.pop_back(): Removes the last element of the deque.
+4.pop_front(): Removes the first element of the deque.
+5.front(): Returns a reference to the first element.
+6.back(): Returns a reference to the last element.
+7.at(index): Returns a reference to the element at the specified index.
+8.size(): Returns the number of elements in the deque.
+9.empty(): Checks if the deque is empty.
+10.clear(): Removes all elements from the deque.
+11.insert(position, value): Inserts value at the specified position.
+12.erase(position): Removes the element at the specified position.
+13.resize(new_size): Resizes the deque to contain new_size elements.
+14.swap(other_deque): Swaps the contents with another deque.
