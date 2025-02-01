@@ -17,9 +17,14 @@ class CustomQueue:
         print(ls)
 
     def push(self, val):
-        prev_head = self.head
-        self.head = Node(val)
-        self.head.next = prev_head
+        if self.head == None:
+            self.head = Node(val)
+            return
+        curr_node = self.head
+        while curr_node.next:
+            curr_node = curr_node.next
+            
+        curr_node.next = Node(val)
         self.qsize += 1
         
 
@@ -39,13 +44,14 @@ q.push(1)
 q.push(2)    
 q.push(3)
 q.printQ()
-print(f"Qsize: {q.qsize}")
 print(q.pop())
-print(f"Qsize: {q.qsize}")
+q.printQ()
+q.push(4)
 print(q.pop())
-print(f"Qsize: {q.qsize}")
+q.printQ()
+q.push(5)
 print(q.pop())
-print(f"Qsize: {q.qsize}")
+q.printQ()
 print(q.pop())
 q.printQ()
 
