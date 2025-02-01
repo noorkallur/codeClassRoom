@@ -1,0 +1,34 @@
+Queue: not going to explain
+queue, FIFO
+user made queue in custom_queue.py
+
+Python module Queue:
+https://docs.python.org/3/library/queue.html
+
+In python we have module for queue implementaion its "import queue"
+This queue internally is desgined with linked list principles ie node and next address 
+pythons queue — A synchronized queue class 
+The queue module implements multi-producer, multi-consumer queues.
+It is especially useful in threaded programming when information must be exchanged safely between multiple threads
+
+methods:
+1. put(item, block=True, timeout=None): Adds `item` to the queue. If `block` is `True` and `timeout` is `None`, it blocks until a free slot is available.
+2. get(block=True, timeout=None): Removes and returns an item from the queue. If `block` is `True` and `timeout` is `None`, it blocks until an item is available.
+3. put_nowait(item): Equivalent to `put(item, block=False)`. Adds `item` to the queue without blocking.
+4. get_nowait(): Equivalent to `get(block=False)`. Removes and returns an item from the queue without blocking.
+5. qsize(): Returns the approximate size of the queue.
+6. empty(): Returns `True` if the queue is empty, `False` otherwise.
+7. full(): Returns `True` if the queue is full, `False` otherwise.
+8. task_done(): Indicates that a formerly enqueued task is complete. Used by queue consumers.
+9. join(): Blocks until all items in the queue have been processed. Used by queue producers.
+
+
+
+
+
+Why do I have to use queue module? why cant i use list with pop(0) and insert(0, val)?
+1. It is queue, but here when you pop or insert, it requires shifting all the other elements one position to the left or right.
+This makes it an O(n) operation, Where as the Queue module its O(1)
+
+2. Another key advantage is its thread safety, allowing multiple threads to access the queue concurrently. 
+This is facilitated by the "blocking" and "timeout" features, which help manage thread synchronization effectively.
