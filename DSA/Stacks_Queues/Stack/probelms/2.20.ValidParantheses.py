@@ -66,3 +66,21 @@ s = "["
 print(isValidDev(s))
 s = "}"
 print(isValidDev(s))
+
+#revisited 
+def isValid(self, s):
+    open_to_clode ={
+        "(" : ")",
+        "[" : "]",
+        "{" : "}"
+    }
+    stk =[]
+    for brack in s:
+        if brack in open_to_clode:
+            stk.append(open_to_clode[brack])
+        else:
+            if not stk or stk.pop() != brack:
+                return False
+    if stk:
+        return False
+    return True
