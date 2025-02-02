@@ -1,0 +1,74 @@
+Stacks:
+
+Stacks follow the Last In, First Out (LIFO) principle, meaning the last item you add is the first one you take out.
+It's a way to manage data where you need to keep track of the order of operations.
+Push: When you add a plate to the top of the stack.
+Pop: When you remove the top plate from the stack.
+
+In python, you can straight up use a list and use it as a stack
+push operation: append to replicate pushls.append()
+pop operation: remove the last item to replicat pop using ls.pop()
+
+In Cpp, you can use arrays and linkedlist to implement stack
+Both methods have their pros and cons. Using an array is simpler and faster for small stacks, but it has a fixed size(user need to input this).
+Using a linked list is more flexible and can handle larger stacks, but it requires more memory and is slightly more complex.
+
+To overcome the fixed size using arrays.. we can create a stack with dynamic size .ie create an another stack with double its size as soon as we reach maxSize and delte the old one
+Example code for cpp dynamic stack with arrays
+#include <iostream>
+
+class Stack {
+    int* arr;
+    int capacity;
+    int top;
+
+    void resize() {
+        int* newArr = new int[2 * capacity];
+        for (int i = 0; i < capacity; i++) {
+            newArr[i] = arr[i];
+        }
+        delete[] arr;
+        arr = newArr;
+        capacity *= 2;
+    }
+
+public:
+    Stack(int size = 2) {
+        arr = new int[size];
+        capacity = size;
+        top = -1;
+    }
+
+    ~Stack() {
+        delete[] arr;
+    }
+
+    void push(int x) {
+        if (top == capacity - 1) {
+            resize();
+        }
+        arr[++top] = x;
+        std::cout << x << " pushed into stack\n";
+    }
+
+    int pop() {
+        if (top == -1) {
+            std::cout << "Stack Underflow\n";
+            return -1;
+        }
+        return arr[top--];
+    }
+
+    bool isEmpty() {
+        return top == -1;
+    }
+};
+
+int main() {
+    Stack stack;
+    stack.push(10);
+    stack.push(20);
+    stack.push(30); // This will trigger resizing
+    std::cout << stack.pop() << " popped from stack\n";
+    return 0;
+}
