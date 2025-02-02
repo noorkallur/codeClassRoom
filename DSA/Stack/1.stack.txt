@@ -7,7 +7,8 @@ Pop: When you remove the top plate from the stack.
 
 In python, you can straight up use a list and use it as a stack
 push operation: append to replicate pushls.append()
-pop operation: remove the last item to replicat pop using ls.pop()
+pop operation: remove the last item to replicate pop using ls.pop()
+ls will not have the problem of fixed size as Python lists are dynamic, meaning they automatically resize as needed. 
 
 In Cpp, you can use arrays and linkedlist to implement stack
 Both methods have their pros and cons. Using an array is simpler and faster for small stacks, but it has a fixed size(user need to input this).
