@@ -56,3 +56,16 @@ temperatures = [73,74,75,71,69,72,76,77]
 # temperatures = [55,38,53,81,61,93,97,32,43,78]
 
 print(object.dailyTemperatures(temperatures))
+
+# revisited could have improved it if i gave it a thought
+def dailyTemperatures(temperatures):
+    stk=[]
+    output=[0 for _ in range(len(temperatures))]
+    for i, temp in enumerate(temperatures):
+        while stk and temp > stk[-1][1]:
+            output[stk[-1][0]] = i-stk[-1][0]
+            stk.pop()
+        stk.append([i, temp])
+        print(stk)
+        
+    return output
