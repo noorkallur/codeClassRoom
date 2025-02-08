@@ -70,5 +70,16 @@ def nKnights(N):
     return counter(board, row, col, knightCount)
 
 print(nKnights(3))
+print(nKnights(4))
 print(f"total iterations:{total_iterations}")
+
+
+# revisited and failed, but added this new method
+def isKnightSafe(board, row, col):
+    listAdder = [(-2, 1),(-1, 2),(-2, -1),(-1, -2)]
+    for rowAdder, colAdder in listAdder:
+        if row+rowAdder >= 0 and col+colAdder >= 0 and col+colAdder <= len(board[0])-1 :
+            if board[row+rowAdder][col+colAdder] == 1:
+                return False
+    return True
     
