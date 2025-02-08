@@ -141,3 +141,54 @@ def solveSudoku2(board):
 solveSudoku2(board)
 print("new answer")
 dispboard(board)
+
+
+
+####################################
+# revisited the same quesiton again
+def isNumValid(num, row, col):
+    if str(num) in board[row]:
+        return False
+    
+    for r in range(len(board)):
+        if str(num) == board[r][col]:
+            return False
+    
+    row = row//3 * 3   
+    col = col//3 * 3
+    for r in range(row, row+3):
+        for c in range(col, col+3):
+            if str(num) == board[r][c]:
+                return False
+    
+    return True
+    
+
+def dispboard(board):
+    for b in board:
+        print(b)
+    print("")
+    
+    
+def sudoku(board):
+    
+    def solverEngine(row, col):
+        
+        if row == len(board):
+            dispboard(board)
+            return
+        
+        if col == len(board[0]):
+            solverEngine(row+1, 0)
+            return
+        
+        if board[row][col] == ".":
+            for num in range(1,10):
+                if isNumValid(num, row, col):
+                    board[row][col] = str(num)
+                    solverEngine(row, col+1)
+                    board[row][col] = "."
+        else:
+            solverEngine(row, col+1)
+            
+    solverEngine(0,0)
