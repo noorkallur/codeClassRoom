@@ -2,7 +2,7 @@
     this does not explain the complexity but shows you the number of ways: https://www.youtube.com/watch?v=xFv_Hl4B83A
     also check the nqueen_q_arrangements.png before reading this 
 ## Explanation
-    ![nqueen_arrangements](https://github.com/noor-kallur/CodeClassRoom/blob/master/DSA/Recursion/Backtracking/Nqueen/nqueen_q_arrangements.png)
+![nqueen_arrangements](https://github.com/noor-kallur/CodeClassRoom/blob/master/DSA/Recursion/Backtracking/Nqueen/nqueen_q_arrangements.png)
 
 ### Recursive Calls and Implied Nested Loops
     For Loop:
