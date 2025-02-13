@@ -114,8 +114,8 @@ class AVL:
     
     
 avl = AVL()
-for i in range(0, 1000):
+for i in range(0, 10):
     avl.insert_node(i)
     
-# avl.prettyDisplay()
-print(avl.height(avl.root))
+avl.prettyDisplay()
+print(avl.height(avl.root)) # 9
