@@ -60,16 +60,16 @@ class BinaryTree:
         cur_lvl_nums =[]
         for _ in range(lvl_size):
             node = q.popleft()
-            cur_lvl_nums.append(node.val)
+            cur_lvl_nums.append(node.val) # store the nums in curr level
             if node.left != None:
                 q.append(node.left)
             
             if node.right != None:
                 q.append(node.right)
         
-        self.levelOrderBottom_helper(q, out_put)
+        self.levelOrderBottom_helper(q, out_put) # using recursion to go to next level
         
-        out_put.append(cur_lvl_nums)
+        out_put.append(cur_lvl_nums) # add the curr_lvl_nums in the call stack now
 
     def levelOrderBottom2(self, root):
         q = deque()
@@ -87,7 +87,7 @@ class BinaryTree:
                     q.append(node.right)
                     
             out_put.append(curr_lvl_nums)
-        return out_put[::-1]
+        return out_put[::-1] # reversing the output
     
 bt = BinaryTree()
 bt.prettyDisplay(bt.root, 0)
