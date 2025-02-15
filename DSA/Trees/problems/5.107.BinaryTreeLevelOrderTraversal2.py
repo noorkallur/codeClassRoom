@@ -32,6 +32,7 @@ class BinaryTree:
         # find the last right node
         self.prettyDisplay(parentNode.right, level+1)
         
+        
         if level != 0:
             for i in range(level-1):
                 print("|\t", end="")
@@ -41,26 +42,55 @@ class BinaryTree:
          
         # left in that level 
         self.prettyDisplay(parentNode.left, level+1)
- 
-    def levelOrder(self):
+
+    def levelOrderBottom(self, root):
         q = deque()
-        q.append(self.root)
-        res =[]
+        q.append(root)
+        out_put=[]
+        
+        self.levelOrderBottom_helper(q, out_put)
+    
+        return out_put
+    
+    def levelOrderBottom_helper(self, q, out_put):
+        if not len(q):
+            return
+        
+        lvl_size = len(q)
+        cur_lvl_nums =[]
+        for _ in range(lvl_size):
+            node = q.popleft()
+            cur_lvl_nums.append(node.val)
+            if node.left != None:
+                q.append(node.left)
+            
+            if node.right != None:
+                q.append(node.right)
+        
+        self.levelOrderBottom_helper(q, out_put)
+        
+        out_put.append(cur_lvl_nums)
+
+    def levelOrderBottom2(self, root):
+        q = deque()
+        q.append(root)
+        out_put =[]
         while len(q):
             levelSize = len(q)
-            ls = []
+            curr_lvl_nums = []
             for _ in range(levelSize):
                 node = q.popleft()
-                ls.append(node.val)
+                curr_lvl_nums.append(node.val)
                 if node.left != None:
                     q.append(node.left)
                 if node.right != None:
                     q.append(node.right)
                     
-            res.append(ls)
-        return res
-                 
-        
+            out_put.append(curr_lvl_nums)
+        return out_put[::-1]
+    
 bt = BinaryTree()
 bt.prettyDisplay(bt.root, 0)
-print(bt.levelOrder())
+print(bt.levelOrderBottom(bt.root))
+print(bt.levelOrderBottom2(bt.root))
+                  
