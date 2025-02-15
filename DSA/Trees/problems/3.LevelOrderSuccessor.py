@@ -50,21 +50,18 @@ class BinaryTree:
     def level_order_successor(self, root, target):
         q = deque()
         q.append(root)
-        target_found = False
         
         while len(q):
             node = q.popleft()
-            if target_found == True:
-                return node.val
-            
-            if target == node.val:
-                target_found = True
                 
             if node.left != None:
                 q.append(node.left)
             if node.right != None:
                 q.append(node.right)
-    
+
+            if target == node.val:
+                if len(q):
+                    return q.popleft().val
     
 bt = BinaryTree()
 bt.prettyDisplay(bt.root, 0)
