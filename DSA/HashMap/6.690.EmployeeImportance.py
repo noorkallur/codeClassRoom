@@ -24,3 +24,20 @@ def getImportance(self, employees, id: int) -> int:
         id_sub[emp.id] = emp.subordinates
     
     return getImportance_helper(id, id_sub[id])
+
+
+# using anothe techniqe similar to BFS
+def getImportance(self, employees, id: int) -> int:
+    id_emp_obj = {}
+
+    for emp in employees:
+        id_emp_obj[emp.id] = emp
+
+    emp_stk = [id]
+    imp_sum = 0
+    while emp_stk:
+        emp =id_emp_obj[emp_stk.pop()]
+        imp_sum += emp.importance
+        emp_stk.extend(emp.subordinates)
+    
+    return imp_sum
