@@ -19,3 +19,24 @@ class Solution:
             if num_list[i] >= num_list[i+1]:
                 return False
         return True
+
+    # dev solution
+    def isValidBST(self, root)-> bool:
+        def isValidBST_helper(root, low, high):
+            if root == None:
+                return True
+            
+            if low != None and root.val <= low:
+                return False
+            if high != None and root.val >= high:
+                return False
+            
+            if not isValidBST_helper(root.left, low, root.val):
+                return False
+            
+            return isValidBST_helper(root.right, root.val, high)
+            
+        return isValidBST_helper(root, None, None)
+                
+                
+                
