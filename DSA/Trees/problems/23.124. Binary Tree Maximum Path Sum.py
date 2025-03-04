@@ -16,7 +16,7 @@ class Solution:
             left_sum = maxPathSum_helper(root.left)
             right_sum = maxPathSum_helper(root.right)
 
-            left_sum = max(0, left_sum)
+            left_sum = max(0, left_sum) #if sum is negative then consider it as 0, dont include neg values
             right_sum = max(0, right_sum)
             max_path_sum = max(root.val + left_sum + right_sum, max_path_sum)
             return max(left_sum, right_sum) + root.val
