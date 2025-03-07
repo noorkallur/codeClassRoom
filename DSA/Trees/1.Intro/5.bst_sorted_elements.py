@@ -70,6 +70,16 @@ class BST:
             return False
         
         return True  
+    
+    def is_balanced(self, node):
+
+        if node == None:
+            return True
+        
+        if abs(self.height(node.left) - self.height(node.right)) <=1:
+            return self.is_balanced(node.left) and self.is_balanced(node.right) 
+        else:
+            return False
   
     def insert_sorted_arr(self, nums):
         s = 0
