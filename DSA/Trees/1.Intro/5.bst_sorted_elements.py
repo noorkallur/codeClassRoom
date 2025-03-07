@@ -57,6 +57,7 @@ class BST:
     
     def is_balanced(self):
         # traverse through the entire tree to find if there are any nodes which have left and right heights greater than 1
+        # tree head could be balanced but subtrees might not be
         return self.is_balanced_tree_helper(self.root)
     
     def is_balanced_tree_helper(self, parent_node):
