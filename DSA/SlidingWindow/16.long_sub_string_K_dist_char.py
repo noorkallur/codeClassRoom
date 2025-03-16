@@ -22,7 +22,20 @@ def long_sub_str_with_k_dist_char(str, k):
         max_sub_len =max(sum(hash_map.values()), max_sub_len)
     
     return max_sub_len  
-        
+
+# revisited  the question
+def long_sub_str_with_k_dist_char(str, target):
+    hm = {}
+    max_sub_len = 0
+    for i in range(len(str)):
+        if len(hm) == target and not str[i] in hm: # check if hm reaches target len and new char is being added
+            max_sub_len = max(max_sub_len, sum(hm.values())) # update the max len 
+            hm.pop(list(hm.keys())[0]) # pop the index 0 of the hashmap (hashmap is orderd)
+
+        hm[str[i]] = hm.get(str[i], 0) + 1 # add the new char in the hashmap
+
+    return max_sub_len
+       
 str = "aaahhibc"# 5
 k = 2
 str = "ecebaa" # 3
