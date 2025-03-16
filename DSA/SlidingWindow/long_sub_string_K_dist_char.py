@@ -23,7 +23,7 @@ def long_sub_str_with_k_dist_char(str, k):
     
     return max_sub_len  
 
-# revisited  the question
+# revisited  the question, using hash_map
 def long_sub_str_with_k_dist_char(str, target):
     hm = {}
     max_sub_len = 0
