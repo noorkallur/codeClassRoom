@@ -23,11 +23,11 @@ def long_sub_str_with_k_dist_char(str, k):
     
     return max_sub_len  
         
-str = "aaahhibc"
+str = "aaahhibc"# 5
 k = 2
-str = "ecebaa"
+str = "ecebaa" # 3
 k = 2
-str = "aabacccac"
+str = "aabacccac" # 3
 k = 1
 print(long_sub_str_with_k_dist_char(str, k))
             
