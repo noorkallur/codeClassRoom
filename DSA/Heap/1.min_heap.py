@@ -25,38 +25,113 @@ class Min_Heap:
 
             index = p_index
 
+
+    def remove_first(self):
+        if not self.data:
+            return None
+        
+        rm_val = self.data[0]
+
+        self.data[0] = self.data.pop()
+        end = len(self.data)
+        
+        index = 0
+        print(self.data)
+        while index < end:
+            left_i= self.left(index)
+            right_i= self.right(index)
+            print(f"index:{index}, left:{left_i}, right:{right_i}")
+            min_idx = -1
+             
+            if left_i >= end:
+                break
+            if right_i >= end:
+                min_idx = left_i
+            elif self.data[left_i] < self.data[right_i]:
+                min_idx = left_i
+            else:
+                min_idx = right_i
+
+            if self.data[index] < self.data[min_idx]:
+                break
+
+            self.data[index], self.data[min_idx] = self.data[min_idx], self.data[index]
+
+            index = min_idx
     
+        return rm_val
+
+    def remove_at_index(self, index):
+        end = len(self.data)
+        if index > end -1:
+            return None
+        if index == end -1:
+            self.data.pop()
+            return
+        
+        self.data[index] = self.data.pop()
+        end = end-1
+        while index < end:
+            left_i= self.left(index)
+            right_i= self.right(index)
+            min_idx = index
+
+            print(f"index:{index}, left:{left_i}, right:{right_i}")
+             
+            if left_i < end and self.data[left_i] < self.data[min_idx]:
+                min_idx = left_i
+
+            if right_i < end and self.data[right_i] < self.data[min_idx]:
+                min_idx = right_i
+
+            if min_idx == index:
+                break
+
+            self.data[index], self.data[min_idx] = self.data[min_idx], self.data[index]
+
+            index = min_idx
+    
+
+    def heapify_down(self, index):
+        end = len(self.data)
+        while index < end:
+            left_i= self.left(index)
+            right_i= self.right(index)
+            min_idx = index
+
+            print(f"index:{index}, left:{left_i}, right:{right_i}")
+             
+            if left_i < end and self.data[left_i] < self.data[min_idx]:
+                min_idx = left_i
+
+            if right_i < end and self.data[right_i] < self.data[min_idx]:
+                min_idx = right_i
+
+            if min_idx == index:
+                break
+
+            self.data[index], self.data[min_idx] = self.data[min_idx], self.data[index]
+
+            index = min_idx
+    
+            
 min_heap = Min_Heap()
 
 min_heap.heapify(10)
-print(min_heap.data)
-
-min_heap.heapify(3)
-print(min_heap.data)
-
-min_heap.heapify(5)
-print(min_heap.data)
-
-min_heap.heapify(7)
-print(min_heap.data)
-
-min_heap.heapify(2)
-print(min_heap.data)
-
 min_heap.heapify(20)
-print(min_heap.data)
-
-
-min_heap.heapify(18)
-print(min_heap.data)
-
+min_heap.heapify(30)
+min_heap.heapify(40)
+min_heap.heapify(23)
+min_heap.heapify(33)
+min_heap.heapify(43)
 min_heap.heapify(1)
 print(min_heap.data)
 
-min_heap.heapify(11)
-min_heap.heapify(13)
+min_heap.remove_at_index(0)
 print(min_heap.data)
-min_heap.heapify(14)
+
+min_heap.remove_at_index(0)
 print(min_heap.data)
-min_heap.heapify(15)
+
+min_heap.remove_at_index(0)
 print(min_heap.data)
