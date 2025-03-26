@@ -1,65 +1,62 @@
-# heap
-
 class Min_Heap:
     def __init__(self):
         self.data = []
 
     def parent(self, index):
-        return (index) //2
+        return (index + 1) //2 -1
     
     def left(self, index):
-        return (index) * 2
+        return (index + 1) *2 -1
     
     def right(self, index):
-        return (index) * 2 + 1
+        return (index +1)*2 
     
-    def insert_value(self, val):
+    def heapify(self, val):
         self.data.append(val)
-        cur_index = len(self.data)    
-        print(f"curr-{cur_index}")    
-        while cur_index > 1:
-            p_index = self.parent(cur_index) 
-            print(f"{self.data[cur_index-1]}, {self.data[p_index-1]}")
 
-            if self.data[cur_index-1] > self.data[p_index -1]:
+        index = len(self.data) -1
+
+        while index > 0:
+            p_index = self.parent(index)
+            if self.data[p_index] < self.data[index]:
                 break
-            self.data[cur_index - 1], self.data[p_index -1] = self.data[p_index -1], self.data[cur_index- 1] # swap
-            print("swapped")
-            print(self.data)
-            cur_index = p_index
-        
+            
+            self.data[p_index], self.data[index] = self.data[index], self.data[p_index] # swap
 
+            index = p_index
+
+    
 min_heap = Min_Heap()
 
-min_heap.insert_value(10)
+min_heap.heapify(10)
 print(min_heap.data)
 
-min_heap.insert_value(3)
+min_heap.heapify(3)
 print(min_heap.data)
 
-min_heap.insert_value(5)
+min_heap.heapify(5)
 print(min_heap.data)
 
-min_heap.insert_value(7)
+min_heap.heapify(7)
 print(min_heap.data)
 
-min_heap.insert_value(2)
+min_heap.heapify(2)
 print(min_heap.data)
 
-min_heap.insert_value(20)
+min_heap.heapify(20)
 print(min_heap.data)
 
 
-min_heap.insert_value(18)
+min_heap.heapify(18)
 print(min_heap.data)
 
-min_heap.insert_value(1)
+min_heap.heapify(1)
 print(min_heap.data)
 
-min_heap.insert_value(11)
-min_heap.insert_value(13)
+min_heap.heapify(11)
+min_heap.heapify(13)
 print(min_heap.data)
-min_heap.insert_value(14)
+min_heap.heapify(14)
 print(min_heap.data)
-min_heap.insert_value(15)
+min_heap.heapify(15)
 print(min_heap.data)
