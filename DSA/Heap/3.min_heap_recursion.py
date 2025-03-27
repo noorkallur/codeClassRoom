@@ -27,12 +27,13 @@ class Min_Heap:
 
     def remove_at_index(self, index):
         if index == len(self.data) -1:
-            self.data.pop()
-            return
-        
+            return self.data.pop()
+            
+        pop_val = self.data[index]
         self.data[index] = self.data.pop()
 
         self.down_heap(index)
+        return pop_val
 
     def down_heap(self, index):
         left_idx = self.left(index)
@@ -49,14 +50,16 @@ class Min_Heap:
             self.data[index], self.data[min_index] = self.data[min_index], self.data[index]
             self.down_heap(min_index)
 
-
+    def heap_sort(self):
+        sorted_arr = []
+        while len(self.data) > 0:
+            sorted_arr.append(self.remove_at_index(0))
+        return sorted_arr
+    
 min_heap = Min_Heap()
 min_heap.insert(10)
 min_heap.insert(20)
 min_heap.insert(30)
 min_heap.insert(1)
 print(min_heap.data)
-min_heap.remove_at_index(0)
-print(min_heap.data)
-min_heap.remove_at_index(1)
-print(min_heap.data)
+print(min_heap.heap_sort())
