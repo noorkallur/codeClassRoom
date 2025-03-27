@@ -37,7 +37,7 @@ class Min_Heap:
 
     def down_heap(self, index):
         left_idx = self.left(index)
-        right_idx = self.left(index)
+        right_idx = self.right(index)
         min_index = index
         if left_idx < len(self.data) and self.data[left_idx] < self.data[min_index]:
             min_index = left_idx
