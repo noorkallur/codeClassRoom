@@ -44,7 +44,8 @@ Find the sum of elements from index `1` to `3`:
 sum = prefix[3] - prefix[0] = 20 - 2 = 18
 ```
 
-# Example usage
+## Example usage
+```
 arr = [2, 4, 6, 8, 10]
 prefix = compute_prefix_sum(arr)
 print("Prefix Sum Array:", prefix)
