@@ -1,5 +1,5 @@
 # Prefix Sum
-
+[practice problems](https://medium.com/@maityamit/prefix-sum-summary-with-practice-questions-sheet-1d-2d-on-leetcode-83c8deb4f713)
 ## Introduction
 The prefix sum is a powerful technique used in computer science and competitive programming to preprocess an array for efficient range queries. It involves creating a new array where each element at index `i` contains the sum of all elements from the start of the array up to index `i`.
 
