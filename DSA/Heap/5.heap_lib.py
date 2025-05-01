@@ -17,3 +17,13 @@
 # # NOTE: _heapify_max is not recommended as its private function, it might change in future
 
 # # to make a maxheap use negation of the heap
+
+
+# # import note
+# The heapq module in Python provides functions for creating and managing heaps. By default, it implements a min-heap, where the smallest element is at the root.
+
+# Behavior with Lists of Pairs
+# When working with lists of pairs, the heapq module uses the default comparison operator to organize the heap. The comparison works as follows:
+
+# First Element: It compares the first elements of the pairs.
+# Second Element: If the first elements are equal, it then compares the second elements.
