@@ -6,7 +6,7 @@ Push: When you add a plate to the top of the stack.
 Pop: When you remove the top plate from the stack.
 
 In python, you can straight up use a list and use it as a stack
-push operation: append to replicate pushls.append()
+push operation: append to replicate push ls.append()
 pop operation: remove the last item to replicate pop using ls.pop()
 ls will not have the problem of fixed size as Python lists are dynamic, meaning they automatically resize as needed. 
 
