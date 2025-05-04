@@ -70,7 +70,18 @@ class BST:
             return False
         
         return True  
-  
+    # added new isTreeBalanced
+    def isTreeBalanced(self):
+        def isTreeBalanced_helper(node):
+            if node == None:
+                return True
+            
+            if abs(self.heightNode(node.left) - self.heightNode(node.right)) > 1:
+                return False
+
+            return isTreeBalanced_helper(node.left) and isTreeBalanced_helper(node.right)
+
+        return isTreeBalanced_helper(self.root)
         
 bst = BST()
 bst.insert_value(15)
