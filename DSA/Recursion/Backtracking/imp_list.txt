@@ -1,0 +1,22 @@
+🔁 Backtracking & Recursion Essentials (LeetCode)
+🔹 Subset & Combination Problems
+Subsets – LC #78
+Subsets II – LC #90
+Combination Sum – LC #39
+Combination Sum II – LC #40
+Combinations – LC #77
+Letter Combinations of a Phone Number – LC #17
+🔹 Permutation Problems
+Permutations – LC #46
+Permutations II – LC #47
+Next Permutation – LC #31
+🔹 Partitioning & Constraint Problems
+Palindrome Partitioning – LC #131
+Restore IP Addresses – LC #93
+Word Break II – LC #140
+🔹 Grid & Board Problems
+Word Search – LC #79
+N-Queens – LC #51
+Sudoku Solver – LC #37
+
+https://leetcode.com/problems/subsets-ii/solutions/750386/python3-dfs-solutions-to-6-different-classic-backtracking-problems-more
