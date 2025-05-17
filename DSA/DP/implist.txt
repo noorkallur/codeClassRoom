@@ -1,0 +1,123 @@
+Here's a comprehensive list of 1D Dynamic Programming (DP) problems categorized by technique or pattern. These are essential for coding interviews and mastering them will give you a strong foundation in DP.
+
+🧠 1. Basic Memoization / Tabulation
+These problems help you understand the core idea of storing results to avoid recomputation.
+
+Fibonacci Numbers
+Climbing Stairs
+Min Cost Climbing Stairs
+House Robber
+House Robber II (circular array)
+Tribonacci Number
+Decode Ways
+Jump Game
+Jump Game II
+Maximum Subarray (Kadane’s Algorithm)
+🔁 2. DP with State Transitions
+These involve transitioning between states based on decisions.
+
+Longest Increasing Subsequence
+Number of Longest Increasing Subsequences
+Partition Equal Subset Sum
+Target Sum
+Combination Sum IV
+Coin Change
+Coin Change II
+Perfect Squares
+Integer Break
+🧩 3. Subset / Knapsack Variants
+Classic 0/1 and unbounded knapsack problems.
+
+0/1 Knapsack
+Subset Sum
+Count of Subset Sum
+Minimum Subset Sum Difference
+Target Sum (can be reduced to subset sum)
+Partition Equal Subset Sum
+Rod Cutting Problem
+Unbounded Knapsack
+🧵 4. String DP (1D optimized)
+Some string problems can be optimized to 1D DP.
+
+Longest Palindromic Substring (space optimized)
+Longest Common Subsequence (space optimized)
+Edit Distance (space optimized)
+Distinct Subsequences
+Wildcard Matching (space optimized)
+🔄 5. Greedy + DP Hybrid
+These problems combine greedy decisions with DP.
+
+Jump Game II
+Maximum Product Subarray
+Best Time to Buy and Sell Stock (with cooldown, transaction fee, etc.)
+📈 6. Monotonic DP / Convex Hull Trick (Advanced)
+These are more advanced and often used in competitive programming.
+
+Maximum Sum of 3 Non-Overlapping Subarrays
+Minimum Cost to Merge Stones
+Line of Sight / Convex Hull Trick problems
+🧮 7. Digit DP (Advanced)
+Used for counting numbers with certain properties.
+
+Count numbers with unique digits
+Count numbers with digit sum divisible by K
+Count numbers with no adjacent same digits
+🧠 8. Bitmask + 1D DP
+Used when the state can be represented by a bitmask.
+
+Count All Valid Pickup and Delivery Options
+TSP (Traveling Salesman Problem) with bitmask
+Minimum Cost to Connect Two Groups of Points
+
+LEET problems
+🟢 Level 1: Intro to DP (Memoization & Tabulation)
+Start here to understand the core idea of storing results.
+70. Climbing Stairs
+746. Min Cost Climbing Stairs
+198. House Robber
+213. House Robber II
+1137. N-th Tribonacci Number
+509. Fibonacci Number
+
+
+🟡 Level 2: 1D DP with State Transitions
+Learn how to build solutions based on previous states.
+53. Maximum Subarray (Kadane’s Algorithm)
+121. Best Time to Buy and Sell Stock
+122. Best Time to Buy and Sell Stock II
+55. Jump Game
+300. Longest Increasing Subsequence
+673. Number of Longest Increasing Subsequences X please do it again
+494. Target Sum
+416. Partition Equal Subset Sum
+377. Combination Sum IV
+322. Coin Change
+518. Coin Change II
+279. Perfect Squares
+343. Integer Break
+45. Jump Game II
+152. Maximum Product Subarray
+
+🟠 Level 3: Subset & Knapsack Patterns
+These are foundational for many real-world DP problems.
+322. Coin Change
+518. Coin Change II
+377. Combination Sum IV
+279. Perfect Squares
+416. Partition Equal Subset Sum
+494. Target Sum
+
+🔵 Level 4: String DP (1D or Optimized)
+These problems teach you how to apply DP to strings.
+91. Decode Ways
+139. Word Break
+97. Interleaving String
+115. Distinct Subsequences
+
+🔴 Level 5: Advanced 1D DP
+These are more complex and often asked in top-tier interviews.
+123. Best Time to Buy and Sell Stock III
+309. Best Time to Buy and Sell Stock with Cooldown
+714. Best Time to Buy and Sell Stock with Transaction Fee
+1326. Minimum Number of Taps to Open to Water a Garden
+140. Word Break II
