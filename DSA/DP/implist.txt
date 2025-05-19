@@ -121,3 +121,6 @@ These are more complex and often asked in top-tier interviews.
 714. Best Time to Buy and Sell Stock with Transaction Fee
 1326. Minimum Number of Taps to Open to Water a Garden
 140. Word Break II
+
+
+https://leetcode.com/discuss/post/458695/dynamic-programming-patterns-by-aatalyk-pmgr/
