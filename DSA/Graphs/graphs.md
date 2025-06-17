@@ -92,11 +92,27 @@ Below is a curated list of LeetCode graph problems arranged roughly by difficult
 ---
 
 ### How to Approach This List
-
 - **Start Small:** Begin with the basic traversal/connectivity problems to build intuition.
 - **Progress to Order & Detection:** Move to cycle detection and topological sort problems once you’re comfortable with traversals.
 - **Tackle Advanced Topics:** Finally, challenge yourself with the advanced problems that require more nuanced algorithmic thinking (Tarjan’s algorithm, backtracking with lexicographical constraints, etc.).
-
 Working through these problems will give you a well-rounded understanding of graph concepts and patterns frequently appearing in interviews and competitive programming.
 
-Feel free to ask for more details on any problem or concept—happy coding on your graph journey!
+
+### Graph techniques
+**Multi-Source BFS**
+- **Core Idea:** Treat every cell that contains a 0 as a starting point (source) for a BFS. Instead of performing BFS from every cell, you enqueue all zeros at once and let the search “spread out” to update the distances of neighboring 1’s.
+**How It Works:**
+- **Initialization:** Create a queue and enqueue every position with a 0 (with initial distance 0).
+- **BFS Propagation:** Pop a cell from the queue and update its unvisited neighbors (up, down, left, right) with distance +1.
+- **Result:** The first time a cell is reached, its distance—the number of levels away from the nearest 0—is minimal because BFS guarantees level-by-level expansion.
+- **Time complexity:** O(m * n), where m is the number of rows and n is the number of columns.
+
+Grid Shortest-Path Problems:
+01 Matrix: Find distance to the nearest 0.
+Walls and Gates: Find distance from rooms to the nearest gate.
+Rotting Oranges: Simulate how rotting spreads over time.
+Multiple Landmark Distance Calculation:
+Compute the minimum distance to the nearest special node (like hospitals or fire stations).
+Spread/Infection Models:
+Model the simultaneous spreading of fire, water, or infection from multiple sources.
+
