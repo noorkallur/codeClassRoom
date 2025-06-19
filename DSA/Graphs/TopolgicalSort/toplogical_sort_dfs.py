@@ -24,14 +24,14 @@ def topSort(graph):
     return top_stack[::-1]
 
 # Example index-based graph adjaceny list
-graph = [
-    [1, 2],
-    [3],
-    [3],
-    []
-]
+# graph = [
+#     [1, 2],
+#     [3],
+#     [3],
+#     []
+# ]
 
-print("Topological Sort:", topSort(graph))
+# print("Topological Sort:", topSort(graph))
 
 # what if cycles are present
 
@@ -72,11 +72,11 @@ graph_with_cycle = [
     [2],  # Node 1 points to Node 2
     [0]   # Node 2 points back to Node 0, forming a cycle 0 -> 1 -> 2 -> 0
 ]
-graph = [
-    [1],      # Node 0 points to Node 1
-    [2],      # Node 1 points to Node 2
-    [0, 3],   # Node 2 points back to Node 0 (cycle) and to Node 3 (acyclic)
-    [4],      # Node 3 points to Node 4
-    []        # Node 4 is a sink in the acyclic subgraph
-]
+# graph = [
+#     [1],      # Node 0 points to Node 1
+#     [2],      # Node 1 points to Node 2
+#     [0, 3],   # Node 2 points back to Node 0 (cycle) and to Node 3 (acyclic)
+#     [4],      # Node 3 points to Node 4
+#     []        # Node 4 is a sink in the acyclic subgraph
+# ]
 print("Topological Sort:", topSort_cycle(graph))
