@@ -1,0 +1,5 @@
+subsequences:
+# Tip 1
+The total number of subsequences in an array depends only on its length (2ⁿ possible subsets), not on the order of its elements—sorting won’t change that count. What sorting does affect is the identity and positions of those subsequences.
+If you only need the count of subsequences (or subsequences with a given property), you can safely sort the array to simplify your logic.
+If you must enumerate or return the actual subsequences in their original order, don’t sort —sorting will scramble the indices and change which subsequences you get.
