@@ -13,9 +13,11 @@ Decode Ways
 Jump Game
 Jump Game II
 Maximum Subarray (Kadane’s Algorithm)
+
+
+
 🔁 2. DP with State Transitions
 These involve transitioning between states based on decisions.
-
 Longest Increasing Subsequence
 Number of Longest Increasing Subsequences
 Partition Equal Subset Sum
@@ -25,9 +27,10 @@ Coin Change
 Coin Change II
 Perfect Squares
 Integer Break
+
+
 🧩 3. Subset / Knapsack Variants
 Classic 0/1 and unbounded knapsack problems.
-
 0/1 Knapsack
 Subset Sum
 Count of Subset Sum
