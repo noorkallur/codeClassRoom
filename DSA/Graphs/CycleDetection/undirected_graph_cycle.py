@@ -102,11 +102,11 @@ def detect_cycle():
 
             for n in adj_list[node]:
                 if n not in visited :
-                    q.appendleft(n, node)
+                    q.append((n, node))
                     visited.add(n)
 
                 #n is in visted list, make sure its not the parent
-                if n != parent:
+                elif n != parent:
                     #found n which is already visited, i.e. cycle present
                     return True
         # we went throu every node, meaning no loop present
