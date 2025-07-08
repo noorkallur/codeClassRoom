@@ -41,10 +41,10 @@ for row in range(len(adj_list)):
 def cycleDetector():
 
 	def dfs(node):
-		visted.add(node)
+		visited.add(node)
 		rec_stack.add(node)
 		for n in adj_list[node]:
-			if n not in visted:
+			if n not in visited:
 				if dfs(n):
 					return True
 			elif n in rec_stack:
@@ -53,11 +53,12 @@ def cycleDetector():
 		rec_stack.remove(node)
 		return False
 
-	visted = set()
+	visited = set()
 	rec_stack = set()
 	for i in range(verticies):
-		if dfs(i):
-			return True
+		if i not in visited:
+			if dfs(i):
+				return True
 		
 	return False
 
