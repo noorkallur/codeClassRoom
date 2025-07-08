@@ -49,13 +49,32 @@ def topSort(adj_list: List[List[int]]) -> List[int]:
         # cycle found in graph
         return []
 
-adj_list = [
+
+graph1 = [ # cyclic graph
+    [1],      # Node 0 points to Node 1
+    [2],      # Node 1 points to Node 2
+    [1, 3],   # Node 2 points back to Node 0 (cycle) and to Node 3 (acyclic)
+    [4],      # Node 3 points to Node 4
+    []        # Node 4 is a sink in the acyclic subgraph
+]
+graph2 = [ # acyclic graph [0, 1, 2, 3]
     [1, 2],
     [3],
     [3],
     []
 ]
-adj_list = [
+graph3 = [ # cyclic
+    [1],  # Node 0 points to Node 1
+    [2],  # Node 1 points to Node 2
+    [0]   # Node 2 points back to Node 0, forming a cycle 0 -> 1 -> 2 -> 0
+]
+graph4 = [ # acyclic [0, 1, 2, 3]
+    [1, 2],
+    [3],
+    [3],
+    []
+]
+graph5 = [ # acyclic [4, 5, 3, 0, 2, 1]
     [],
     [],
     [1],
@@ -63,22 +82,9 @@ adj_list = [
     [0, 1],
     [0, 3]
 ]
-adj_list = [
-    [1, 2],
-    [3],
-    [3],
-    []
-]
-graph_with_cycle = [
-    [1],  # Node 0 points to Node 1
-    [2],  # Node 1 points to Node 2
-    [0]   # Node 2 points back to Node 0, forming a cycle 0 -> 1 -> 2 -> 0
-]
-graph_with_cycle = [
-    [1],      # Node 0 points to Node 1
-    [2],      # Node 1 points to Node 2
-    [1, 3],   # Node 2 points back to Node 0 (cycle) and to Node 3 (acyclic)
-    [4],      # Node 3 points to Node 4
-    []        # Node 4 is a sink in the acyclic subgraph
-]
-print(topSort(graph_with_cycle))
+print(topSort(graph1))
+print(topSort(graph2))
+print(topSort(graph3))
+print(topSort(graph4))
+print(topSort(graph5))
+
