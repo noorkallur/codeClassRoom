@@ -30,8 +30,8 @@ for row in range(len(adj_list)):
 # Process:
 # Perform a Depth-First Search (DFS) from each unvisited vertex.
 # Maintain:
-# A visited array to mark explored vertices.
-# A recursion stack to track the current path.
+# A set to mark visited vertices.
+# A set to track the current nodes in the recursion stack.
 
 # Cycle Check:
 # If you re-encounter a vertex that is already in the recursion stack, a cycle has been detected.
@@ -65,4 +65,5 @@ def cycleDetector():
 
 print(cycleDetector())
   
-  
+# NOTE  
+# rec_stack (or rec_path) only tracks nodes currently in the recursion stack—not the entire path from the root, and not all visited nodes.
