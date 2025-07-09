@@ -1,7 +1,7 @@
 # this is also called KAHNS algorithm
 # The graph should be a DAG
 # A DAG will have one node indegree 0 and also node with outdegree 0
-
+# https://www.youtube.com/watch?v=tggiFvaxjrY
 # HOW to perform top sort
 # step 1: find indegree of all the vertices
 # step 2: push all nodes with indegree 0 to the BFS queue
