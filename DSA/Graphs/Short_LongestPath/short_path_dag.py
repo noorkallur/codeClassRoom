@@ -74,3 +74,10 @@ if __name__ == "__main__":
     head = 2
     distances = shortest_path_dag(graph, head)
     print(distances)  # Expected: [inf, inf, 0, 1, 3]
+
+
+# Note:
+# Why topo sort
+# You need topological order in a DAG for shortest path because it guarantees you always process each node only after all possible ways to reach it have already been considered.
+# Without topological order, you might update a node’s distance before you’ve found the best way to get there, leading to wrong answers.
+
