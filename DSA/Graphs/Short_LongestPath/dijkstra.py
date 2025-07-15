@@ -3,6 +3,13 @@
 # https://www.youtube.com/watch?v=pSqmAO-m7Lk&t=731s
 
 # the below is LAZY dijkstra with min heap
+
+# Steps:
+# Uses a min-heap to pick the current node in O(log V)
+# Pushes every new (distance, node) pair, potentially creating duplicates
+# Skips stale heap entries by comparing popped distance against dist[node]
+# Runs in O((V + E) log V) for sparse graphs, but introduces heap-management overhead
+
 import heapq
 def dijkstra(graph, source):
     INF = float('inf')
@@ -34,7 +41,7 @@ def reconstruct_path(prev, target):
     while next:
         path.append(next)
         next = prev[next]
-        
+
     return path[::-1]
 
 
