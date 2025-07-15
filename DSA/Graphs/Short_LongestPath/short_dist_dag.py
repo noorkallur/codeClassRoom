@@ -5,7 +5,7 @@
 # • When you’re okay with one fixed source – You pick your “head” node, run DFS topo sort from all nodes (or just reachable ones), then do the relaxation. – If you need multi-source or dynamic sources, other algorithms might be a better fit.
 # • Not for unweighted graphs—that’s BFS’s domain – If weights are all “1,” BFS is simpler and finds shortest paths by nature of level-by-level exploration.
 # • Avoid for general graphs or negative cycles – DFS-based topo + relaxation assumes no cycles. – For arbitrary weights with possible cycles, use Bellman-Ford (detects negative cycles) or Dijkstra (if non-negative).
-def shortest_path_dag(graph, head):
+def shortest_dist_dag(graph, head):
     """
     Compute shortest paths in a DAG from a given source (head) node.
 
@@ -69,10 +69,10 @@ if __name__ == "__main__":
         4: []                 # 4 has no outgoing edges
     }
     head = 0
-    distances = shortest_path_dag(graph, head)
+    distances = shortest_dist_dag(graph, head)
     print(distances)  # Expected: [0, 2, 3, 4, 6]
     head = 2
-    distances = shortest_path_dag(graph, head)
+    distances = shortest_dist_dag(graph, head)
     print(distances)  # Expected: [inf, inf, 0, 1, 3]
 
 
