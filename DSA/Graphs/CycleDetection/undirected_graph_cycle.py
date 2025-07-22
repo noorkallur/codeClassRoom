@@ -105,8 +105,8 @@ def detect_cycle():
                     q.append((n, node))
                     visited.add(n)
 
-                #n is in visted list, make sure its not the parent
                 elif n != parent:
+                    #n is in visted list, make sure its not the parent
                     #found n which is already visited, i.e. cycle present
                     return True
         # we went throu every node, meaning no loop present
@@ -120,6 +120,30 @@ def detect_cycle():
             return True
     
     return False 
+
+
+
+# we can also use DFS to find cycle
+def detect_cycle_dfs():
+    def dfs(node, parent):
+        visited.add(node) # Mark current node as visited
+
+        for neighbor in adj_list[node]:
+            if neighbor not in visited:
+                # If neighbor not visited, recurse
+                if dfs(neighbor, node): # Pass current node as parent
+                    return True # Cycle found in deeper recursion
+            elif neighbor != parent:
+                # If neighbor is visited AND it's not the immediate parent, cycle found
+                return True
+        return False # No cycle found in this path
+
+    visited = set()
+    for i in range(verticies):
+        if i not in visited:
+            if dfs(i, -1): # -1 as initial parent for the starting node
+                return True
+    return False
                 
                 
 
