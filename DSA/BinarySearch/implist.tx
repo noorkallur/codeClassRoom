@@ -8,3 +8,15 @@ Ques. No. 1482
 Ques. No. 2064
 Ques. No. 1011
 
+Binary Search on the Answer is a powerful technique for specific problems.
+
+Spot it when:
+The problem asks to "maximize the minimum" or "minimize the maximum" of something (e.g., maximize the minimum distance).
+You can ask a "yes/no" question about a potential answer X: "Is it possible to achieve X?"
+
+How it works:
+Monotonicity: If X is possible, all values smaller than X are also possible. If X is impossible, all values larger than X are impossible.
+
+Search Range: Define a low and high for the possible answer values.
+check(mid) Function: Write a function that efficiently (O(N) or O(N log N)) determines if a mid value is achievable.
+Binary Search: Use check(mid) to narrow down the low/high range until the optimal answer is found.
