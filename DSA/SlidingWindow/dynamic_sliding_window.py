@@ -20,7 +20,7 @@ def minimu_window_size(nums, target):
     
     return min_win_size
         
-nums = [4, 2, 2, 7, 1 ,1 ,2 , 1, 2] # 2
+nums = [4, 2, 2, 7, 1 ,1 ,2 , 1, 2] # 1
 nums = [1, 2, 3] # 3
 print(minimu_window_size(nums, 6))
 
