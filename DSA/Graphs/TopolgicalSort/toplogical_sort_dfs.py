@@ -80,3 +80,28 @@ graph_with_cycle = [
 #     []        # Node 4 is a sink in the acyclic subgraph
 # ]
 print("Topological Sort:", topSort_cycle(graph))
+
+def topSort_cycle(graph):
+    # colors
+    # 0->unvisited, 1->visiting, 2->safe
+    def dfs(node):
+        if colors[node] != 0:
+            return colors[node] == 2
+        
+        colors[node] = 1
+        for neigh in graph[node]:
+            if colors[neigh] == 1 or dfs(neigh) == False:
+                return False
+        colors[node] = 2
+        top_stk.append(node)
+        return True
+
+    n = len(graph)
+    colors = [0] * n
+    top_stk = []
+    for i in range(n):
+        if colors[i] == 0:
+            if not dfs(i):
+                return []
+
+    return top_stk[::-1]
