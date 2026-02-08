@@ -10,7 +10,9 @@ push operation: append to replicate push ls.append()
 pop operation: remove the last item to replicate pop using ls.pop()
 ls will not have the problem of fixed size as Python lists are dynamic, meaning they automatically resize as needed. 
 
-In Cpp, you can use arrays and linkedlist to implement stack
+In Cpp, 
+The default is #include <stack> or
+you can use arrays and linkedlist to implement stack
 Both methods have their pros and cons. Using an array is simpler and faster for small stacks, but it has a fixed size(user need to input this).
 Using a linked list is more flexible and can handle larger stacks, but it requires more memory and is slightly more complex.
 
