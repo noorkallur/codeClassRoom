@@ -11,4 +11,7 @@
 # isalpha(): Checks if the string contains only alphabetic characters.
 # isdigit(): Checks if the string contains only digits.
 # isalnum(): Checks if the string contains only alphanumeric characters.
+
 # format(): Formats the string using placeholders.
+# txt = "For only {price:.2f} dollars!"
+# print(txt.format(price = 49))
