@@ -4,14 +4,14 @@ The total number of subsequences in an array depends only on its length (2ⁿ po
 If you only need the count of subsequences (or subsequences with a given property), you can safely sort the array to simplify your logic.
 If you must enumerate or return the actual subsequences in their original order, don’t sort —sorting will scramble the indices and change which subsequences you get.
 
-📌 Why?
+📌 Why 2^n?
 For each element, you have 2 choices:
 Include it
 Exclude it
 
 So for n elements:
-
-2 X 2 X 2 ... = 2^n
+1st 2nd 3rd ... nth
+2 X 2 X 2   ... 2^n
 
 
 ❌ Non-empty subsequences only
