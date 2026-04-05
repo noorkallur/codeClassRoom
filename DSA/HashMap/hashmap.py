@@ -1,5 +1,10 @@
 # # Hash Map
-# hash-maps are dict in python
+# hash-maps are dict in python generally
+# the core data structure of dict in python is Hash Table + Array
+# this is ordered i.e. insertion order matters
+# look up time is Average 0(1)
+
+
 city_map = {}
 city_map["USA"] = "New York" 
 city_map["India"] ="Delhi"
