@@ -13,5 +13,3 @@ def maxSubArray(nums, k):
 nums = [1, 4, 7, 2, 4, 8, 3, 2, 5]
 nums = [4, 2, 1, 7, 8, 1, 2, 8, 1, 0]
 print(maxSubArray(nums, 3))
-        
-           
