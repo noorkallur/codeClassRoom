@@ -20,7 +20,7 @@ def rotated_pivot(arr):
 # print(rotated_pivot([ 2, 1]))
 
 def recursiveBS(s, e, nums, target):
-    while s<=e:
+    if s<=e:
         mid = (s+e)//2
         if target == nums[mid]:
             return mid
