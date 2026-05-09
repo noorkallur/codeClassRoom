@@ -1,9 +1,3 @@
-def swap(i , j, nums):
-    temp = nums[i]
-    nums[i] = nums[j]
-    nums[j] = temp
-    
-    
 def selection_recursion(nums, highest, i, j):
     if i >= len(nums):
         return
@@ -12,7 +6,7 @@ def selection_recursion(nums, highest, i, j):
             highest = j
         return selection_recursion(nums, highest, i, j+1)
     else:
-        swap(highest, len(nums)-1-i, nums)
+        nums[highest], nums[len(nums)-1-i] == nums[len(nums)-1-i], nums[highest]
         return selection_recursion(nums, 0, i+1, 1)
 
 
