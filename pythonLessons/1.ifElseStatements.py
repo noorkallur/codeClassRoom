@@ -1,4 +1,3 @@
-Weight = "ali"
 weight = input("Weight:-") #90 KG, 90 lb
 lweight= weight.lower()
 unitIndex = lweight.find("k")
