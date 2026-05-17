@@ -11,12 +11,12 @@ Permutations – LC #46
 Permutations II – LC #47
 Next Permutation – LC #31
 🔹 Partitioning & Constraint Problems
-Palindrome Partitioning – LC #131
-Restore IP Addresses – LC #93
-Word Break II – LC #140
+Palindrome Partitioning – LC 131
+Restore IP Addresses – LC 93
+Word Break II – LC 140
 🔹 Grid & Board Problems
-Word Search – LC #79
-N-Queens – LC #51
-Sudoku Solver – LC #37
+Word Search – LC 79
+N-Queens – LC 51
+Sudoku Solver – LC 37
 
 https://leetcode.com/problems/subsets-ii/solutions/750386/python3-dfs-solutions-to-6-different-classic-backtracking-problems-more
